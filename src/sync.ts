@@ -16,6 +16,7 @@ export function isGuide(value:unknown):value is GuideEntry {
     Array.isArray(e.tags) && e.tags.length<=20 && e.tags.every(t=>typeof t==='string' && t.length<=50) &&
     (e.sources===undefined || (Array.isArray(e.sources) && e.sources.length<=6 && e.sources.every(s=>isRecord(s)&&typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=100 && isHttpsSource(s.url)))) && (isHttpsSource(e.sourceUrl)||Boolean(e.sources?.length)) &&
     (e.minChapter===undefined || [1,2,3,4,5].includes(e.minChapter)) &&
+    (e.maxChapter===undefined || ([1,2,3,4,5].includes(e.maxChapter)&&e.minChapter!==undefined&&e.maxChapter>=e.minChapter)) &&
     (e.access===undefined || ['chapter','unknown','general'].includes(e.access)) &&
     (e.access!=='chapter'||e.minChapter!==undefined) &&
     (e.priority===undefined || (Number.isInteger(e.priority)&&e.priority>=0&&e.priority<=100)) &&

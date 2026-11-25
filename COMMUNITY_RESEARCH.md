@@ -31,3 +31,5 @@ Public Reddit discussions and linked video titles informed these guides. No auto
 - Mysteries: separate reported observations from theories and puzzle rewards.
 
 Revisit findings after major patches and seek independent reproduction before assigning confirmed status.
+
+Time-sensitive Chapter 1 guides have a recommendation end chapter. They stay readable for reference, but no longer appear as current opportunities in later chapters. Unknown-access optional activities remain research references.

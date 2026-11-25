@@ -13,6 +13,7 @@ export function canRead(e:GuideEntry,session:PlaySession,showSpoilers:boolean){
 }
 export function accessLabel(e:GuideEntry,session:PlaySession){
  if(e.minChapter!==undefined&&isFuture(e,session.chapter))return session.chapter===0?'Set chapter to check access':`Later · Chapter ${e.minChapter}+`;
+ if(e.maxChapter!==undefined&&session.chapter>e.maxChapter)return 'Earlier chapter · availability may have changed';
  if(e.access==='chapter'&&e.minChapter!==undefined)return 'Chapter reached · check mission unlock';
  if(e.access==='unknown'||e.category==='Vehicles')return 'Check access in game';
  return 'General reference';
@@ -20,12 +21,12 @@ export function accessLabel(e:GuideEntry,session:PlaySession){
 const unfinished=(e:GuideEntry,progress:ReadonlySet<string>)=>!e.steps.length||e.steps.some(s=>!progress.has(`${e.id}:${s.id}`));
 export function recommend(entries:GuideEntry[],session:PlaySession,progress:ReadonlySet<string>,showSpoilers:boolean){
  // Spoiler override opens the library, but never changes what counts as chapter-eligible.
- const pool=entries.filter(e=>canRead(e,session,showSpoilers)&&!isFuture(e,session.chapter)&&unfinished(e,progress));
+ const pool=entries.filter(e=>canRead(e,session,showSpoilers)&&!isFuture(e,session.chapter)&&(e.maxChapter===undefined||session.chapter<=e.maxChapter)&&unfinished(e,progress));
  const rank=(a:GuideEntry,b:GuideEntry)=>(b.priority??0)-(a.priority??0)||(a.title<b.title?-1:a.title>b.title?1:0);
  const pick=(category:GuideEntry['category'],predicate:(e:GuideEntry)=>boolean=()=>true)=>pool.filter(e=>e.category===category&&(!e.id.startsWith('vf-')||e.access!==undefined)&&predicate(e)).sort(rank);
  const money=pick('Money',e=>e.access!=='unknown').slice(0,2);
  const story=pick('Story',e=>e.id!=='story-side-quests'&&!e.tags.includes('optional')&&e.access!=='unknown').slice(0,1);
- const optional=pick('Story',e=>e.id==='story-side-quests'||e.tags.includes('optional')).slice(0,1);
+ const optional=pick('Story',e=>e.access!=='unknown'&&(e.id==='story-side-quests'||e.tags.includes('optional'))).slice(0,1);
  const vehicles=pick('Vehicles');
  const rides=['Car','Aircraft','Boat'].flatMap(kind=>vehicles.filter(e=>e.vehicleClass===kind).slice(0,1));
  const nearby=session.region?pool.filter(e=>e.region===session.region&&['Places','Collections'].includes(e.category)).sort((a,b)=>Number(b.category==='Collections')-Number(a.category==='Collections')||rank(a,b)).slice(0,3):[];

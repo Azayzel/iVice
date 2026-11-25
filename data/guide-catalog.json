@@ -1690,7 +1690,8 @@
     "confidence": "reported",
     "access": "chapter",
     "priority": 95,
-    "minChapter": 1
+    "minChapter": 1,
+    "maxChapter": 1
   },
   {
     "id": "reddit-chapter-one-cutoff-detail",
@@ -1736,7 +1737,8 @@
     "confidence": "reported",
     "access": "chapter",
     "priority": 40,
-    "minChapter": 1
+    "minChapter": 1,
+    "maxChapter": 1
   },
   {
     "id": "reddit-house-reading",
@@ -1784,7 +1786,8 @@
     "confidence": "reported",
     "access": "chapter",
     "priority": 80,
-    "minChapter": 1
+    "minChapter": 1,
+    "maxChapter": 1
   },
   {
     "id": "reddit-early-aircraft",

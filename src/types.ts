@@ -6,7 +6,7 @@ export type GuideEntry = {
   id:string; title:string; category:Category; summary:string; body:string; region:string;
   sourceType:GuideSourceType; sourceUrl:string|null; sourceLabel:string|null;
   sources?:GuideSource[]; spoiler:boolean; tags:string[]; steps:GuideStep[];
-  minChapter?:1|2|3|4|5; access?:'chapter'|'unknown'|'general'; priority?:number; stage?:string; vehicleClass?:string; confidence?:'reported'|'template'|'confirmed'; recommendation?:string;
+  minChapter?:1|2|3|4|5; maxChapter?:1|2|3|4|5; access?:'chapter'|'unknown'|'general'; priority?:number; stage?:string; vehicleClass?:string; confidence?:'reported'|'template'|'confirmed'; recommendation?:string;
 };
 export type Chapter = 0|1|2|3|4|5;
 export type PlaySession = {chapter:Chapter;region:string;lastGuideId:string|null};

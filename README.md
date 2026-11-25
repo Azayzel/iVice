@@ -8,7 +8,7 @@
 
 ## Screen gallery
 
-These are **real screenshots captured by Playwright in GitHub Actions** from the interactive iVice *browser preview*. They are not iOS Simulator or Android device screenshots; those still need a native release build. The original SVG design studies are also preserved in `docs/screenshots/`.
+These are **historical screenshots captured by Playwright in GitHub Actions** from the interactive iVice *browser preview*. They are not iOS Simulator or Android device screenshots; those still need a native release build. The original SVG design studies are also preserved in `docs/screenshots/`.
 
 | Home & quick guides | Money recommendations | Source-linked guide |
 |---|---|---|
@@ -105,4 +105,4 @@ Choose a chapter (or leave it unset) and optionally an in-game region. Each play
 
 **Appearance:** Jason (muted charcoal/green), Lucia (plum), Classic Vice (neon). Original utility-style palettes, compact launcher and guide cards, not copied in-game assets.
 
-The native UI now differs from older browser preview screenshots; see the preview as a design reference, not native device evidence.
+The interactive browser preview now demonstrates chapter/region selection, spoiler override, saved guides and the three themes. The gallery above is archival; new Playwright screenshots are available in the latest CI run artifacts. Browser preview tests are not native device evidence.

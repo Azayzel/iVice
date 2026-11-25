@@ -9,7 +9,7 @@ export function isFuture(e:GuideEntry,chapter:Chapter){
 /** Fail closed for explicitly later chapters and spoiler-tagged records. The catalog editor
  * must classify titles, summaries, steps and bodies, not only the title. */
 export function canRead(e:GuideEntry,session:PlaySession,showSpoilers:boolean){
- return showSpoilers||(!e.spoiler&&!isFuture(e,session.chapter));
+ return showSpoilers||(!e.spoiler&&!isFuture(e,session.chapter)&&(!e.id.startsWith('vf-')||e.access!==undefined));
 }
 export function accessLabel(e:GuideEntry,session:PlaySession){
  if(e.minChapter!==undefined&&isFuture(e,session.chapter))return session.chapter===0?'Set chapter to check access':`Later · Chapter ${e.minChapter}+`;
@@ -22,9 +22,9 @@ export function recommend(entries:GuideEntry[],session:PlaySession,progress:Read
  // Spoiler override opens the library, but never changes what counts as chapter-eligible.
  const pool=entries.filter(e=>canRead(e,session,showSpoilers)&&!isFuture(e,session.chapter)&&unfinished(e,progress));
  const rank=(a:GuideEntry,b:GuideEntry)=>(b.priority??0)-(a.priority??0)||(a.title<b.title?-1:a.title>b.title?1:0);
- const pick=(category:GuideEntry['category'],predicate:(e:GuideEntry)=>boolean=()=>true)=>pool.filter(e=>e.category===category&&predicate(e)).sort(rank);
+ const pick=(category:GuideEntry['category'],predicate:(e:GuideEntry)=>boolean=()=>true)=>pool.filter(e=>e.category===category&&(!e.id.startsWith('vf-')||e.access!==undefined)&&predicate(e)).sort(rank);
  const money=pick('Money',e=>e.access!=='unknown').slice(0,2);
- const story=pick('Story',e=>e.id!=='story-side-quests').slice(0,1);
+ const story=pick('Story',e=>e.id!=='story-side-quests'&&!e.tags.includes('optional')&&e.access!=='unknown').slice(0,1);
  const optional=pick('Story',e=>e.id==='story-side-quests'||e.tags.includes('optional')).slice(0,1);
  const vehicles=pick('Vehicles');
  const rides=['Car','Aircraft','Boat'].flatMap(kind=>vehicles.filter(e=>e.vehicleClass===kind).slice(0,1));

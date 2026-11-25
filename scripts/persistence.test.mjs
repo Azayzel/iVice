@@ -108,3 +108,4 @@ test('remote chapter and ranking metadata must be valid',()=>{
  assert.equal(sync.isGuide({...entry,minChapter:2,access:'chapter',priority:80}),true);
  for(const extra of [{minChapter:0},{minChapter:6},{access:'chapter'},{access:'guaranteed'},{priority:101},{priority:1.5}])assert.equal(sync.isGuide({...entry,...extra}),false);
 });
+test('unclassified remote guides require explicit spoiler opt-in and are not recommended',()=>{const g={...entry};assert.equal(rec.canRead(g,rec.DEFAULT_SESSION,false),false);assert.equal(rec.canRead(g,rec.DEFAULT_SESSION,true),true);assert.equal(rec.recommend([g],rec.DEFAULT_SESSION,new Set(),true).money.length,0)});

@@ -38,8 +38,11 @@ def run(verify:bool):
         phone=browser.new_context(viewport={'width':390,'height':844},device_scale_factor=1,reduced_motion='reduce')
         page=phone.new_page()
         page.goto(base+'/preview.html')
-        page.get_by_text('PLAY SMARTER.').wait_for()
-        assert page.get_by_text('MAKE MONEY').count()==1
+        page.get_by_text('YOUR PLAY SESSION').wait_for()
+        page.locator('#chapter').select_option('2')
+        page.locator('#region').select_option('Port Gellhorn')
+        assert page.get_by_text('Quick cash: sell stolen cars').count()==1
+        assert page.get_by_text('Chapter 3: better vehicle sales').count()==0
         shot(page,'home-mobile.png',verify)
         page.locator('[data-tab="Library"]').click()
         page.get_by_role('searchbox').fill('speedboat')
@@ -47,19 +50,31 @@ def run(verify:bool):
         page.get_by_role('searchbox').fill('')
         page.get_by_role('button',name='Money',exact=True).click()
         assert page.get_by_text('Quick cash: sell stolen cars').count()==1
+        assert page.get_by_text('Chapter 3: better vehicle sales').count()==0
         shot(page,'library-money-mobile.png',verify)
-        page.get_by_role('button',name='Open Quick cash: sell stolen cars') if False else None
+        page.locator('#spoilers').check()
+        assert page.get_by_text('Chapter 3: better vehicle sales').count()==1
+        page.locator('#spoilers').uncheck()
         page.locator('[data-entry="money-stolen-cars"]').click()
         assert page.get_by_text('SOURCE-LINKED / REPORTED').count()==1
-        assert page.get_by_text('PowerPyx — GTA 6 Money Guide').count()==1
+        assert page.get_by_text('PowerPyx — money guide',exact=False).count()==1
         shot(page,'money-guide-mobile.png',verify)
         page.get_by_role('checkbox').first.check()
         assert page.get_by_role('checkbox').first.is_checked()
+        page.locator('#bookmark').click()
         page.reload()
-        page.locator('[data-entry="money-stolen-cars"]').count() # Home can return to this via Library
+        assert page.locator('#chapter').input_value()=='2'
+        assert page.locator('#region').input_value()=='Port Gellhorn'
         page.locator('[data-tab="Library"]').click()
+        page.get_by_role('button',name='Saved',exact=True).click()
         page.locator('[data-entry="money-stolen-cars"]').click()
-        assert page.get_by_role('checkbox').first.is_checked(), 'Checklist progress must persist in browser preview'
+        assert page.get_by_role('checkbox').first.is_checked()
+        page.locator('[data-tab="Settings"]').click()
+        page.locator('#theme').select_option('lucia')
+        assert page.evaluate("getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()")=='#15111c'
+        shot(page,'lucia-settings-mobile.png',False)
+        page.reload()
+        assert page.evaluate("getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()")=='#15111c'
         desktop=browser.new_context(viewport={'width':1440,'height':1000},device_scale_factor=1,reduced_motion='reduce')
         landing=desktop.new_page()
         landing.goto(base+'/index.html')
@@ -69,7 +84,7 @@ def run(verify:bool):
         shot(landing,'landing-desktop.png',verify,full_page=True)
         browser.close()
     server.shutdown()
-    print('Visual smoke checks and screenshot ' + ('verification' if verify else 'generation') + ' passed (4 screens)')
+    print('Visual smoke checks and screenshot ' + ('verification' if verify else 'generation') + ' passed (5 screens)')
 
 def shot(page,name,verify,full_page=False):
     image=page.screenshot(full_page=full_page,animations='disabled')

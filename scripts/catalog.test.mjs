@@ -46,3 +46,10 @@ test('early published recommendations are not misrepresented as Rockstar-verifie
   assert.ok(e.stage);
  }
 });
+
+test('Reddit-derived guides preserve attribution and reported confidence',()=>{
+ const community=entries.filter(e=>e.id.startsWith('reddit-'));assert.ok(community.length>=17);
+ for(const e of community){assert.equal(e.confidence,'reported');assert.equal(e.sourceType,'community');assert.match(e.sourceUrl,/^https:\/\/www\.reddit\.com\/r\/[^/]+\/comments\/[a-z0-9]+\//);assert.ok(e.sources.some(s=>s.url===e.sourceUrl));assert.ok(e.tags.includes('reddit'));if(e.access==='chapter')assert.ok(e.minChapter>=1&&e.minChapter<=5);}
+ for(const id of ['reddit-kalaga-pump','reddit-vice-city-nostalgia','reddit-chapter-one-cutoff-detail'])assert.equal(entries.find(e=>e.id===id).spoiler,true);
+});
+test('browser and native catalogs match',()=>{const preview=readFileSync(new URL('../docs/preview.html',import.meta.url),'utf8');const start=preview.indexOf('const entries=')+'const entries='.length;const end=preview.indexOf('const read=',start);assert.deepEqual(JSON.parse(preview.slice(start,end).trim().replace(/;$/,'')),entries)});

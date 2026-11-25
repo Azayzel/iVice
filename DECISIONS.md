@@ -13,3 +13,4 @@
 - Separate spoiler visibility from recommendation eligibility. Unlock metadata is editorial; reaching a chapter is not proof a mission prerequisite is satisfied.
 - Rank source-backed editorial priorities, not estimated payouts or measured performance. Unknown access remains a research pick.
 - Use original Jason/Lucia/Classic palettes; the linked video was not inspectable frame-by-frame. Do not simulate system signal/battery or reuse Rockstar interface assets.
+- Hand-curate Reddit findings into original summaries with direct links; no raw post dumps, media copying, automated scraping, or use of votes as verification.

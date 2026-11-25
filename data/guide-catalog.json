@@ -1431,5 +1431,654 @@
     "minChapter": 3,
     "access": "chapter",
     "priority": 95
+  },
+  {
+    "id": "reddit-map-legend",
+    "title": "Read the map: mission types",
+    "category": "Play Guides",
+    "summary": "Reported map colors distinguish story and optional activities.",
+    "body": "Players describe pink markers with dark text for story, the inverse for side missions, purple for minor activities and yellow for illicit operations. Compare with your map legend; settings may affect appearance. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/",
+    "sourceLabel": "r/GTA6 — controls and map tips",
+    "sources": [
+      {
+        "label": "r/GTA6 — controls and map tips",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "map",
+      "missions",
+      "optional",
+      "icons"
+    ],
+    "steps": [],
+    "stage": "All chapters",
+    "confidence": "reported",
+    "access": "general",
+    "priority": 40
+  },
+  {
+    "id": "reddit-enterable-buildings",
+    "title": "Find accessible buildings",
+    "category": "Play Guides",
+    "summary": "Map shading may help locate interiors.",
+    "body": "Dark blue may indicate accessible space. Commenters caution that an accessible annex or garage can color an entire building. Check entrances rather than assuming every room opens. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/",
+    "sourceLabel": "r/GTA6 — controls and map tips",
+    "sources": [
+      {
+        "label": "r/GTA6 — controls and map tips",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "map",
+      "interiors"
+    ],
+    "steps": [],
+    "stage": "All chapters",
+    "confidence": "reported",
+    "access": "general",
+    "priority": 40
+  },
+  {
+    "id": "reddit-vehicle-controls",
+    "title": "Driving controls: engine, signals and ducking",
+    "category": "Play Guides",
+    "summary": "Reported PS5 and Xbox controller shortcuts.",
+    "body": "Players report holding Circle/B to duck in a car, double-tapping Triangle/Y to exit with the engine running, and D-pad left/right for signals. Test with your current control settings. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/",
+    "sourceLabel": "r/GTA6 — controls and map tips",
+    "sources": [
+      {
+        "label": "r/GTA6 — controls and map tips",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y4rvht/some_quick_tips_for_the_game/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "cars",
+      "controls",
+      "ps5",
+      "xbox",
+      "driving"
+    ],
+    "steps": [],
+    "stage": "Free roam",
+    "confidence": "reported",
+    "access": "general",
+    "priority": 40
+  },
+  {
+    "id": "reddit-early-free-roam",
+    "title": "Explore outside the Keys in Chapter 1",
+    "category": "Places",
+    "summary": "Unexplored map fog may not mean a region is locked.",
+    "body": "A player describes visiting Vice City and flying to Port Gellhorn during Chapter 1 after free roam opens. This does not establish that every mission, shop or vehicle is available. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTAVI/comments/1y263tp/free_roaming_the_map_early/",
+    "sourceLabel": "r/GTAVI — early free roaming",
+    "sources": [
+      {
+        "label": "r/GTAVI — early free roaming",
+        "url": "https://www.reddit.com/r/GTAVI/comments/1y263tp/free_roaming_the_map_early/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "map",
+      "exploration"
+    ],
+    "steps": [],
+    "stage": "Chapter 1+ after free roam",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 80,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-keys-workout",
+    "title": "Early fitness routine",
+    "category": "Play Guides",
+    "summary": "Reported home workouts improve health and stamina.",
+    "body": "A launch-day player reports free workouts at Jason's home with limited daily gains. Kitchen protein snacks may provide a temporary benefit. Check the displayed stats after training. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y00880/tips_your_first_few_hours_in_the_keys/",
+    "sourceLabel": "r/GTA6 — early Keys tips (thread contains spoilers)",
+    "sources": [
+      {
+        "label": "r/GTA6 — early Keys tips (thread contains spoilers)",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y00880/tips_your_first_few_hours_in_the_keys/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "health",
+      "stamina",
+      "workout"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Try a home workout"
+      },
+      {
+        "id": "step-2",
+        "label": "Check the stat change"
+      },
+      {
+        "id": "step-3",
+        "label": "Revisit on another in-game day"
+      }
+    ],
+    "stage": "Chapter 1 · home access",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 40,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-keys-cash-stash",
+    "title": "Protect early-game cash",
+    "category": "Money",
+    "summary": "Leave surplus earnings in storage rather than carrying everything.",
+    "body": "The early Keys discussion suggests keeping excess cash at home and carrying a working reserve because arrest or death may cost carried resources. Banking access and carry-over need checking in your save. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y00880/tips_your_first_few_hours_in_the_keys/",
+    "sourceLabel": "r/GTA6 — early Keys tips (thread contains spoilers)",
+    "sources": [
+      {
+        "label": "r/GTA6 — early Keys tips (thread contains spoilers)",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y00880/tips_your_first_few_hours_in_the_keys/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "money",
+      "cash",
+      "bank",
+      "stash"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Check cash storage options"
+      },
+      {
+        "id": "step-2",
+        "label": "Keep a working reserve"
+      },
+      {
+        "id": "step-3",
+        "label": "Review finances before advancing"
+      }
+    ],
+    "stage": "Chapter 1+",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 50,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-chapter-one-cutoff",
+    "title": "Chapter 1: pause before the finale",
+    "category": "Story",
+    "summary": "Back up your save and review time-sensitive activities before the closing sequence.",
+    "body": "A completionist thread describes a transition into consecutive missions without free-roam breaks. Save separately before the next major transition, review optional errands and calls, and check items you care about. The linked thread contains mission names; permanent missability is not established. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/",
+    "sourceLabel": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+    "sources": [
+      {
+        "label": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+        "url": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "story",
+      "optional",
+      "missables",
+      "backup"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Make a separate backup save if available"
+      },
+      {
+        "id": "step-2",
+        "label": "Review optional tasks"
+      },
+      {
+        "id": "step-3",
+        "label": "Review items and outfits"
+      },
+      {
+        "id": "step-4",
+        "label": "Proceed when ready"
+      }
+    ],
+    "stage": "Chapter 1 · before finale",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 95,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-chapter-one-cutoff-detail",
+    "title": "Chapter 1: specific cutoff checkpoints",
+    "category": "Story",
+    "summary": "Mission names and reported time-sensitive errands.",
+    "body": "The linked checklist suggests completing house repairs and errands before Coming Home, responding to Clock Out promptly, and backing up after Recalibration before Tourist Trap. It also reports an optional encounter before Swamped. These are reported scene/item cutoffs, not established 100% requirements. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/",
+    "sourceLabel": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+    "sources": [
+      {
+        "label": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+        "url": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "story",
+      "missables",
+      "optional",
+      "tourist trap",
+      "recalibration"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Review repairs and errands"
+      },
+      {
+        "id": "step-2",
+        "label": "Review timed calls"
+      },
+      {
+        "id": "step-3",
+        "label": "Back up before the reported finale cutoff"
+      }
+    ],
+    "stage": "Chapter 1 · mission-specific",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 40,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-house-reading",
+    "title": "Jason’s house: reading checklist",
+    "category": "Collections",
+    "summary": "A community checklist identifies five reading items around the house.",
+    "body": "Check the bedroom, living room table and window, tool room below the house and the workout deck. The thread identifies five books or magazines, but does not establish whether every item is permanently missable or required for completion. Community report; not independently tested by iVice.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/",
+    "sourceLabel": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+    "sources": [
+      {
+        "label": "r/Trophies — Chapter 1 cutoffs (spoilers)",
+        "url": "https://www.reddit.com/r/Trophies/comments/1y3kzz6/grand_theft_auto_vi_spoilerfree_chapter_1/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "collectibles",
+      "books",
+      "magazines"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Check bedroom"
+      },
+      {
+        "id": "step-2",
+        "label": "Check living room"
+      },
+      {
+        "id": "step-3",
+        "label": "Check tool room"
+      },
+      {
+        "id": "step-4",
+        "label": "Check workout deck"
+      }
+    ],
+    "stage": "Chapter 1 · home access",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 80,
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-early-aircraft",
+    "title": "Early aircraft location video guides",
+    "category": "Vehicles",
+    "summary": "Community videos cover a plane, helicopter and seaplane.",
+    "body": "The creator's guide index lists early aircraft locations. The videos may show acquisition routes; iVice has not independently watched the footage or established exact spawn coordinates or guaranteed unlocks. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/",
+    "sourceLabel": "r/360GameTV — work-in-progress video guide index",
+    "sources": [
+      {
+        "label": "r/360GameTV — work-in-progress video guide index",
+        "url": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/"
+      },
+      {
+        "label": "360GameTV — early plane",
+        "url": "https://youtu.be/wwkWxR67VEc"
+      },
+      {
+        "label": "360GameTV — helicopter and seaplane",
+        "url": "https://youtu.be/uFEIWA_bXTI"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "aircraft",
+      "planes",
+      "helicopter",
+      "seaplane",
+      "location"
+    ],
+    "steps": [],
+    "stage": "Early game · access unverified",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 95,
+    "vehicleClass": "Aircraft"
+  },
+  {
+    "id": "reddit-moses-futo",
+    "title": "Moses request: Karin Futo video guide",
+    "category": "Vehicles",
+    "summary": "A community walkthrough covers locating a Karin Futo for Moses.",
+    "body": "The guide index links a Karin Futo walkthrough tied to a Moses request. Check the request in your save and consult the video for directions. Exact spawn conditions and payouts are not established from the index. Community report; not independently tested by iVice.",
+    "region": "Port Gellhorn",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/",
+    "sourceLabel": "r/360GameTV — work-in-progress video guide index",
+    "sources": [
+      {
+        "label": "r/360GameTV — work-in-progress video guide index",
+        "url": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/"
+      },
+      {
+        "label": "360GameTV — Karin Futo walkthrough",
+        "url": "https://youtu.be/WAzFrBinhlw"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "cars",
+      "money",
+      "moses",
+      "futo",
+      "location"
+    ],
+    "steps": [],
+    "stage": "Chapter 2+ · Moses request",
+    "confidence": "reported",
+    "access": "chapter",
+    "priority": 40,
+    "minChapter": 2,
+    "vehicleClass": "Car"
+  },
+  {
+    "id": "reddit-donnie-packages",
+    "title": "Lost package search: video walkthrough",
+    "category": "Story",
+    "summary": "Community video reference for a package-search task.",
+    "body": "The creator indexes Donnie's lost-package walkthrough and an underwater portion. Exact locations were not verified from the footage. Check task availability and follow the linked guide if stuck. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/",
+    "sourceLabel": "r/360GameTV — work-in-progress video guide index",
+    "sources": [
+      {
+        "label": "r/360GameTV — work-in-progress video guide index",
+        "url": "https://www.reddit.com/r/360GameTV/comments/1y21dh4/gta_6_guide_overview_missions_collectibles/"
+      },
+      {
+        "label": "360GameTV — package locations video",
+        "url": "https://youtu.be/Tvi2UXZvrmc"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "story",
+      "optional",
+      "packages",
+      "underwater",
+      "donnie"
+    ],
+    "steps": [],
+    "stage": "When task is active",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 40
+  },
+  {
+    "id": "reddit-collectible-map-index",
+    "title": "Community collectible maps",
+    "category": "Collections",
+    "summary": "Evolving community maps are research leads, not an exhaustive database.",
+    "body": "Players shared maps and identified missing markers in replies, including meteorite leads beneath a wooden bridge on Hyde Island and in Emerald Springs caves. These are unverified location descriptions, not exact pins. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/grandtheftauto/comments/1y2vca6/100_maps_of_currently_discovered_collectibles/",
+    "sourceLabel": "r/grandtheftauto — collectible maps and corrections",
+    "sources": [
+      {
+        "label": "r/grandtheftauto — collectible maps and corrections",
+        "url": "https://www.reddit.com/r/grandtheftauto/comments/1y2vca6/100_maps_of_currently_discovered_collectibles/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "collectibles",
+      "meteorite",
+      "map",
+      "locations"
+    ],
+    "steps": [],
+    "stage": "Free roam · locations unverified",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 40
+  },
+  {
+    "id": "reddit-collection-types",
+    "title": "Collection categories to track",
+    "category": "Collections",
+    "summary": "Player checklist categories include cards, landmarks, curiosities, sculptures and exploration spots.",
+    "body": "The fan project also tracks meteorites and stunt jumps. Compare with your in-game Collections screen. The source is a launch-day work in progress; this personal checklist is not an official completion calculation. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6unmoderated/comments/1y09ow1/i_made_a_free_spoilerfree_collectibles_checklist/",
+    "sourceLabel": "r/GTA6unmoderated — fan checklist discussion",
+    "sources": [
+      {
+        "label": "r/GTA6unmoderated — fan checklist discussion",
+        "url": "https://www.reddit.com/r/GTA6unmoderated/comments/1y09ow1/i_made_a_free_spoilerfree_collectibles_checklist/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "collectibles",
+      "cards",
+      "landmarks",
+      "curiosities",
+      "sculptures",
+      "stunt jumps"
+    ],
+    "steps": [
+      {
+        "id": "step-1",
+        "label": "Review cards"
+      },
+      {
+        "id": "step-2",
+        "label": "Review landmarks"
+      },
+      {
+        "id": "step-3",
+        "label": "Review curiosities"
+      },
+      {
+        "id": "step-4",
+        "label": "Review sculptures"
+      },
+      {
+        "id": "step-5",
+        "label": "Review exploration spots"
+      }
+    ],
+    "stage": "All chapters",
+    "confidence": "reported",
+    "access": "general",
+    "priority": 40
+  },
+  {
+    "id": "reddit-manifest-monument",
+    "title": "Manifest Canyon monument mystery",
+    "category": "Collections",
+    "summary": "Unusual markings on a reported monument prompted community theories.",
+    "body": "The original poster updated the thread to attribute controller vibration and sound to the Waink scanning feature, rather than a proven secret code. Other theories remain unresolved. Inspect the landmark and note your own observations. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y02wt7/i_may_have_found_gta_6s_version_of_mount_chiliad/",
+    "sourceLabel": "r/GTA6 — Manifest Canyon monument",
+    "sources": [
+      {
+        "label": "r/GTA6 — Manifest Canyon monument",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y02wt7/i_may_have_found_gta_6s_version_of_mount_chiliad/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "easter eggs",
+      "mystery",
+      "waink",
+      "manifest canyon"
+    ],
+    "steps": [],
+    "stage": "Location lead",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 40
+  },
+  {
+    "id": "reddit-kalaga-pump",
+    "title": "Mount Kalaga pump building mystery",
+    "category": "Collections",
+    "summary": "A reported interactable panel is located near a water outlet.",
+    "body": "The report describes a change in water flow after using an in-game panel. A reply suggests a connection with a larger Vice City puzzle; that is a theory, not an independently confirmed solution. No exact map pin is available. Community report; not independently tested by iVice.",
+    "region": "Mount Kalaga",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y41to1/found_something_in_gta_vi/",
+    "sourceLabel": "r/GTA6 — Mount Kalaga pump building report",
+    "sources": [
+      {
+        "label": "r/GTA6 — Mount Kalaga pump building report",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y41to1/found_something_in_gta_vi/"
+      },
+      {
+        "label": "r/GTA6 — reported Vice City Easter egg (spoilers)",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y3jc7g/gta_vice_city_easter_egg_in_gta_vi/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "easter eggs",
+      "mystery",
+      "pump"
+    ],
+    "steps": [],
+    "stage": "Location lead · puzzle unverified",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 85
+  },
+  {
+    "id": "reddit-vice-city-nostalgia",
+    "title": "Classic Vice City Easter egg lead",
+    "category": "Collections",
+    "summary": "Community video discussion describes a nostalgic unlock sequence.",
+    "body": "The shared video is described as showing a Vice City throwback with clothing and motorcycle rewards. The sequence and prerequisites have not been independently verified here. Consult the original thread and footage. Community report; not independently tested by iVice.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6/comments/1y3jc7g/gta_vice_city_easter_egg_in_gta_vi/",
+    "sourceLabel": "r/GTA6 — reported Vice City Easter egg (spoilers)",
+    "sources": [
+      {
+        "label": "r/GTA6 — reported Vice City Easter egg (spoilers)",
+        "url": "https://www.reddit.com/r/GTA6/comments/1y3jc7g/gta_vice_city_easter_egg_in_gta_vi/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "easter eggs",
+      "vice city",
+      "motorcycle"
+    ],
+    "steps": [],
+    "stage": "Puzzle prerequisites unknown",
+    "confidence": "reported",
+    "access": "unknown",
+    "priority": 40
   }
 ]

@@ -106,3 +106,6 @@ Choose a chapter (or leave it unset) and optionally an in-game region. Each play
 **Appearance:** Jason (muted charcoal/green), Lucia (plum), Classic Vice (neon). Original utility-style palettes, compact launcher and guide cards, not copied in-game assets.
 
 The interactive browser preview now demonstrates chapter/region selection, spoiler override, saved guides and the three themes. The gallery above is archival; new Playwright screenshots are available in the latest CI run artifacts. Browser preview tests are not native device evidence.
+## Reddit community research (2026-11-25)
+
+The bundled catalog now contains 53 entries, including 17 original Reddit-derived guides with direct links. Search for `reddit` in the Library. These are reported findings, not independently tested facts. Spoiler-sensitive discoveries are opt-in. See [COMMUNITY_RESEARCH.md](COMMUNITY_RESEARCH.md) for sources and validation limits.

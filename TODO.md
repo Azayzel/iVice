@@ -22,3 +22,4 @@
 - Add independently measured vehicle stats, acquisition locations, and verified mission/collectible walkthroughs. Never label estimated top speeds as measured.
 
 - Expand curated unlock prerequisites, mission-specific recommendations, measured money rates, vehicle acquisition and exact collectible coordinates before marketing them as verified. Add native simulator/device regression and accessibility snapshots for all themes and spoiler modes.
+- Reproduce Reddit reports on console, record game build, verify unlocks and coordinates, and review source availability. Do not copy community maps without permission.

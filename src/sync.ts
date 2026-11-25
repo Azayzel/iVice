@@ -15,10 +15,10 @@ export function isGuide(value:unknown):value is GuideEntry {
     TYPES.includes(e.sourceType??'') && (e.sourceUrl===null||isHttpsSource(e.sourceUrl)) && typeof e.region==='string' && e.region.length<=120 && (e.sourceLabel===null||(typeof e.sourceLabel==='string'&&e.sourceLabel.length<=100)) && typeof e.spoiler==='boolean' &&
     Array.isArray(e.tags) && e.tags.length<=20 && e.tags.every(t=>typeof t==='string' && t.length<=50) &&
     (e.sources===undefined || (Array.isArray(e.sources) && e.sources.length<=6 && e.sources.every(s=>isRecord(s)&&typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=100 && isHttpsSource(s.url)))) && (isHttpsSource(e.sourceUrl)||Boolean(e.sources?.length)) &&
-    (!e.stage || (typeof e.stage==='string' && e.stage.length<=100)) &&
-    (!e.vehicleClass || (typeof e.vehicleClass==='string' && e.vehicleClass.length<=50)) &&
-    (!e.recommendation || (typeof e.recommendation==='string' && e.recommendation.length<=80)) &&
-    (!e.confidence || ['reported','confirmed','template'].includes(e.confidence)) &&
+    (e.stage===undefined || (typeof e.stage==='string' && e.stage.length<=100)) &&
+    (e.vehicleClass===undefined || (typeof e.vehicleClass==='string' && e.vehicleClass.length<=50)) &&
+    (e.recommendation===undefined || (typeof e.recommendation==='string' && e.recommendation.length<=80)) &&
+    (e.confidence===undefined || ['reported','confirmed','template'].includes(e.confidence)) &&
     Array.isArray(e.steps) && e.steps.length<=100 && e.steps.every(s=>isRecord(s)&&typeof s.id==='string' && /^[a-z0-9-]{1,80}$/.test(s.id) && typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=200) && new Set(e.steps.map(s=>s.id)).size===e.steps.length;
 }
 export async function syncCatalog(db:SQLiteDatabase) {

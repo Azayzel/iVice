@@ -20,3 +20,5 @@
 
 - Run native device flows (iOS and Android): cold launch offline, save/reopen checklist and notes, switch and delete profiles, bookmark/unbookmark, spoiler protection, and sync failures. Browser-preview checks do not cover native SQLite or React Native interactions.
 - Add independently measured vehicle stats, acquisition locations, and verified mission/collectible walkthroughs. Never label estimated top speeds as measured.
+
+- Expand curated unlock prerequisites, mission-specific recommendations, measured money rates, vehicle acquisition and exact collectible coordinates before marketing them as verified. Add native simulator/device regression and accessibility snapshots for all themes and spoiler modes.

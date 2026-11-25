@@ -96,3 +96,13 @@ This is an open-source starter; choose a LICENSE before accepting outside contri
 Saved guides now have a dedicated Library filter and home shortcut. Search matches multiple terms across the guide body, title, tags, region and vehicle class. Profile changes, note mutations, checklist updates and sync are serialized to prevent cross-playthrough writes; unfinished note drafts are retained separately in memory for each playthrough while the app stays open. Preview screenshots depict the separate HTML prototype; they are not native runtime validation. Content recommendations are source-linked launch reports, not play-tested rankings.
 
 The home screen offers one-tap search, results load in batches of 30, and spoiler protection warns before opening third-party guide sources. The `scripts/persistence.test.mjs` suite executes the actual persistence SQL against Node's SQLite engine and checks remote payload validation. It does not replace Expo device tests.
+
+## Play session dashboard
+
+Choose a chapter (or leave it unset) and optionally an in-game region. Each playthrough independently remembers chapter, region, last opened guide and checklist state in SQLite. The home screen recommends eligible, unfinished money and story guides, optional activities, vehicle research picks and matching regional references. Unconfirmed vehicle unlocks are explicitly marked; region matches are not GPS or collectible coordinates. No account or location permissions required.
+
+**Spoilers:** default off. Known later-chapter entries and explicitly spoiler-tagged entries are hidden. The home and Library controls reveal all guides if desired; this never upgrades future entries into current-chapter recommendations. External references may reveal plot details. Editorial classification is required for every new guide.
+
+**Appearance:** Jason (muted charcoal/green), Lucia (plum), Classic Vice (neon). Original utility-style palettes, compact launcher and guide cards, not copied in-game assets.
+
+The native UI now differs from older browser preview screenshots; see the preview as a design reference, not native device evidence.

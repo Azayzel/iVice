@@ -704,8 +704,8 @@
     "title": "Quick cash: sell stolen cars",
     "category": "Money",
     "summary": "Chapter 2: unlock Moses, then sell eligible untracked vehicles in Port Gellhorn.",
-    "body": "After the Chapter 2 Moses introduction, the garage in Port Gellhorn accepts eligible cars without trackers. The mission also unlocks tools for entering cars and registering them. This is an early cash option; prioritize the story over repetitive grinding if you want to unlock more profitable methods in Chapter 3. Reported launch-week information, not independently play-tested by iVice.",
-    "region": "General",
+    "body": "After the Chapter 2 Moses introduction, the garage in Port Gellhorn accepts eligible cars without trackers. The mission also unlocks tools for entering cars and registering them. This is a source-linked early cash option; compare actual payouts with the time involved.",
+    "region": "Port Gellhorn",
     "sourceType": "community",
     "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/",
     "sourceLabel": "PowerPyx — GTA 6 Money Guide",
@@ -752,7 +752,10 @@
     "stage": "Chapter 2+",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "EARLY-GAME PICK"
+    "recommendation": "EARLY-GAME PICK",
+    "minChapter": 2,
+    "access": "chapter",
+    "priority": 80
   },
   {
     "id": "money-vault-jobs",
@@ -802,7 +805,9 @@
     "stage": "Later chapters",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "HIGH-REWARD PICK"
+    "recommendation": "HIGH-REWARD PICK",
+    "access": "unknown",
+    "priority": 50
   },
   {
     "id": "money-safe-first-hour",
@@ -852,7 +857,9 @@
     "stage": "Early game",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "START HERE"
+    "recommendation": "START HERE",
+    "access": "general",
+    "priority": 35
   },
   {
     "id": "money-quick-robberies",
@@ -901,7 +908,10 @@
     "stage": "Chapter 1+",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": ""
+    "recommendation": "",
+    "minChapter": 1,
+    "access": "chapter",
+    "priority": 55
   },
   {
     "id": "story-spoiler-safe-route",
@@ -955,7 +965,9 @@
     "stage": "All chapters",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "SPOILER-SAFE ROUTE"
+    "recommendation": "SPOILER-SAFE ROUTE",
+    "access": "general",
+    "priority": 85
   },
   {
     "id": "story-before-point-of-no-return",
@@ -1005,7 +1017,9 @@
     "stage": "Chapter transitions",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "MISSABLES WARNING"
+    "recommendation": "MISSABLES WARNING",
+    "access": "unknown",
+    "priority": 70
   },
   {
     "id": "story-chapter-checkpoints",
@@ -1055,7 +1069,9 @@
     "stage": "All chapters",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": ""
+    "recommendation": "",
+    "access": "general",
+    "priority": 40
   },
   {
     "id": "story-side-quests",
@@ -1104,7 +1120,9 @@
     "stage": "Every chapter",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": ""
+    "recommendation": "",
+    "access": "general",
+    "priority": 90
   },
   {
     "id": "cars-top-speed-watch",
@@ -1154,7 +1172,9 @@
     "stage": "After access",
     "vehicleClass": "Car",
     "confidence": "reported",
-    "recommendation": "PERFORMANCE WATCHLIST"
+    "recommendation": "PERFORMANCE WATCHLIST",
+    "access": "unknown",
+    "priority": 75
   },
   {
     "id": "cars-practical-getaway",
@@ -1204,7 +1224,9 @@
     "stage": "Any time",
     "vehicleClass": "Car",
     "confidence": "reported",
-    "recommendation": "PRACTICAL PICK"
+    "recommendation": "PRACTICAL PICK",
+    "access": "unknown",
+    "priority": 90
   },
   {
     "id": "vehicles-aircraft",
@@ -1251,7 +1273,9 @@
     "stage": "When unlocked",
     "vehicleClass": "Aircraft",
     "confidence": "reported",
-    "recommendation": "AIRCRAFT GUIDE"
+    "recommendation": "AIRCRAFT GUIDE",
+    "access": "unknown",
+    "priority": 90
   },
   {
     "id": "vehicles-speedboats",
@@ -1301,7 +1325,9 @@
     "stage": "When unlocked",
     "vehicleClass": "Boat",
     "confidence": "reported",
-    "recommendation": "WATERCRAFT GUIDE"
+    "recommendation": "WATERCRAFT GUIDE",
+    "access": "unknown",
+    "priority": 90
   },
   {
     "id": "vehicles-offroad",
@@ -1352,7 +1378,9 @@
     "stage": "Any time",
     "vehicleClass": "Off-road",
     "confidence": "reported",
-    "recommendation": ""
+    "recommendation": "",
+    "access": "unknown",
+    "priority": 75
   },
   {
     "id": "money-chapter-three",
@@ -1399,6 +1427,9 @@
     "stage": "Chapter 3",
     "vehicleClass": "",
     "confidence": "reported",
-    "recommendation": "Unlock before grinding"
+    "recommendation": "Unlock before grinding",
+    "minChapter": 3,
+    "access": "chapter",
+    "priority": 95
   }
 ]

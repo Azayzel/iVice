@@ -15,6 +15,10 @@ export function isGuide(value:unknown):value is GuideEntry {
     TYPES.includes(e.sourceType??'') && (e.sourceUrl===null||isHttpsSource(e.sourceUrl)) && typeof e.region==='string' && e.region.length<=120 && (e.sourceLabel===null||(typeof e.sourceLabel==='string'&&e.sourceLabel.length<=100)) && typeof e.spoiler==='boolean' &&
     Array.isArray(e.tags) && e.tags.length<=20 && e.tags.every(t=>typeof t==='string' && t.length<=50) &&
     (e.sources===undefined || (Array.isArray(e.sources) && e.sources.length<=6 && e.sources.every(s=>isRecord(s)&&typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=100 && isHttpsSource(s.url)))) && (isHttpsSource(e.sourceUrl)||Boolean(e.sources?.length)) &&
+    (e.minChapter===undefined || [1,2,3,4,5].includes(e.minChapter)) &&
+    (e.access===undefined || ['chapter','unknown','general'].includes(e.access)) &&
+    (e.access!=='chapter'||e.minChapter!==undefined) &&
+    (e.priority===undefined || (Number.isInteger(e.priority)&&e.priority>=0&&e.priority<=100)) &&
     (e.stage===undefined || (typeof e.stage==='string' && e.stage.length<=100)) &&
     (e.vehicleClass===undefined || (typeof e.vehicleClass==='string' && e.vehicleClass.length<=50)) &&
     (e.recommendation===undefined || (typeof e.recommendation==='string' && e.recommendation.length<=80)) &&

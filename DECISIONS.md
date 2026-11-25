@@ -8,3 +8,8 @@
 - **Snapshot honesty:** Playwright browser captures from a passing CI run are embedded in README as WebP screenshots; three original SVG design studies remain. Native Expo simulator screenshots and pixel regressions remain part of the release QA gate.
 - **Prelaunch:** `docs/index.html` and `docs/wiki.html` for GitHub Pages; avoid falsely claiming changes to GitHub's separate wiki repository. Pages source setting may need manual initialization.
 - **Commit provenance:** publish with authenticated user's connected GitHub identity; no automated AI/Copilot co-authors or misleading commit trailers.
+## Personalized session and phone styling
+- Store chapter, manually selected game region and resume ID per profile; no GPS or save-game inspection. Unknown chapter does not imply chapter 1.
+- Separate spoiler visibility from recommendation eligibility. Unlock metadata is editorial; reaching a chapter is not proof a mission prerequisite is satisfied.
+- Rank source-backed editorial priorities, not estimated payouts or measured performance. Unknown access remains a research pick.
+- Use original Jason/Lucia/Classic palettes; the linked video was not inspectable frame-by-frame. Do not simulate system signal/battery or reuse Rockstar interface assets.

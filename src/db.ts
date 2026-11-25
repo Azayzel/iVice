@@ -1,7 +1,8 @@
 import type {SQLiteDatabase} from 'expo-sqlite';
 import bundled from '../data/guide-catalog.json';
-import type {GuideEntry,Note,Profile} from './types';
+import type {GuideEntry,Note,Profile,PlaySession,Chapter} from './types';
 
+import {DEFAULT_SESSION,REGIONS} from './recommendations';
 const BASE_PROFILE='my-first-playthrough';
 const asGuide=(raw:string):GuideEntry=>JSON.parse(raw) as GuideEntry;
 
@@ -10,6 +11,7 @@ export async function migrate(db:SQLiteDatabase) {
     PRAGMA journal_mode = WAL;
     PRAGMA foreign_keys = ON;
     CREATE TABLE IF NOT EXISTS profiles (id TEXT PRIMARY KEY, name TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS play_sessions (profile_id TEXT PRIMARY KEY, chapter INTEGER NOT NULL DEFAULT 0 CHECK(chapter BETWEEN 0 AND 5), region TEXT NOT NULL DEFAULT '', last_guide_id TEXT, FOREIGN KEY(profile_id) REFERENCES profiles(id) ON DELETE CASCADE);
     CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY, value TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS guides (id TEXT PRIMARY KEY, payload TEXT NOT NULL, origin TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS progress (profile_id TEXT NOT NULL, guide_id TEXT NOT NULL, step_id TEXT NOT NULL, done INTEGER NOT NULL DEFAULT 0,
@@ -89,4 +91,14 @@ export async function replaceRemoteGuides(db:SQLiteDatabase,entries:GuideEntry[]
         item.id,JSON.stringify(item));
     }
   });
+}
+
+export async function readSession(db:SQLiteDatabase,profileId:string):Promise<PlaySession>{
+ const row=await db.getFirstAsync<{chapter:number;region:string;last_guide_id:string|null}>('SELECT chapter,region,last_guide_id FROM play_sessions WHERE profile_id=?',profileId);
+ if(!row)return {...DEFAULT_SESSION};
+ return {chapter:(Number.isInteger(row.chapter)&&row.chapter>=0&&row.chapter<=5?row.chapter:0) as Chapter,region:REGIONS.some(r=>r===row.region)?row.region:'',lastGuideId:row.last_guide_id};
+}
+export async function writeSession(db:SQLiteDatabase,profileId:string,session:PlaySession){
+ if(!Number.isInteger(session.chapter)||session.chapter<0||session.chapter>5||session.region!==''&&!REGIONS.some(r=>r===session.region))throw new Error('Invalid play session');
+ await db.runAsync('INSERT INTO play_sessions(profile_id,chapter,region,last_guide_id) VALUES(?,?,?,?) ON CONFLICT(profile_id) DO UPDATE SET chapter=excluded.chapter,region=excluded.region,last_guide_id=excluded.last_guide_id',profileId,session.chapter,session.region,session.lastGuideId);
 }

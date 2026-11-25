@@ -13,8 +13,9 @@ Add actionable **money earning recommendations**, **story progression**, **best 
 - [x] Original neon UI with quick guide categories
 - [x] Read-only curated API sync contract, schema validation and local-data isolation
 - [x] `docs/` coming-soon website, guide hub and browser interactive preview
-- [x] Authored SVG design previews for README
-- [x] Browser screenshot / visual smoke automation and GitHub Pages workflows
-- [ ] Verify CI tests, capture actual browser snapshots with a permissive CI runner, validate Expo builds on iOS and Android devices
-- [ ] One-time GitHub Pages setting, confirm publicly accessible website URL
+- [x] Browser-captured screenshots from passing CI added to README; authored SVG design previews retained
+- [x] Browser screenshot / visual smoke automation and GitHub Pages workflows (CI green)
+- [x] CI catalog checks and browser snapshots verified
+- [ ] Validate Expo builds on iOS and Android devices
+- [ ] One-time GitHub Pages setting (workflow token cannot create site); confirm publicly accessible URL
 - [ ] Optional ViceFiles publisher API and source verification pipeline

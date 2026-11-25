@@ -8,11 +8,13 @@
 
 ## Screen gallery
 
-These are **authored design previews** of the iVice mobile experience, *not* native-device screenshots. The Actions visual-smoke workflow separately captures **real browser screenshots** of the interactive preview as downloadable CI artifacts. Native simulator screenshots are a release requirement.
+These are **real screenshots captured by Playwright in GitHub Actions** from the interactive iVice *browser preview*. They are not iOS Simulator or Android device screenshots; those still need a native release build. The original SVG design studies are also preserved in `docs/screenshots/`.
 
-| Home & quick guides | Money routes | Guide details |
+| Home & quick guides | Money recommendations | Source-linked guide |
 |---|---|---|
-| ![iVice home design preview](docs/screenshots/home-preview.svg) | ![Money guide category design preview](docs/screenshots/money-preview.svg) | ![Money guide detail design preview](docs/screenshots/guide-preview.svg) |
+| ![iVice browser preview home screenshot](docs/screenshots/home-mobile.webp) | ![Money routes browser screenshot](docs/screenshots/library-money-mobile.webp) | ![Money guide browser screenshot](docs/screenshots/money-guide-mobile.webp) |
+
+[See the full-size coming-soon page screenshot](docs/screenshots/landing-desktop.webp) · [Passing browser screenshot workflow](https://github.com/Azayzel/iVice/actions/runs/45679198900)
 
 ## What the guide does
 

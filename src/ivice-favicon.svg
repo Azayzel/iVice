@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512" role="img" aria-label="iVice favicon">
+  <title>iVice favicon</title>
+  <defs><linearGradient id="sky" x2="0" y2="1">
+    <stop stop-color="#31265D"/>
+    <stop offset=".32" stop-color="#77649E"/>
+    <stop offset=".57" stop-color="#CE7AA1"/>
+    <stop offset=".81" stop-color="#F7A183"/>
+    <stop offset="1" stop-color="#FFC77F"/>
+  </linearGradient>
+  <linearGradient id="water" x2="0" y2="1">
+    <stop stop-color="#B7688D"/>
+    <stop offset="1" stop-color="#282145"/>
+  </linearGradient>
+  <linearGradient id="letter" x2="0" y2="1">
+    <stop stop-color="#FFF5E8"/>
+    <stop offset="1" stop-color="#FFD8BC"/>
+  </linearGradient>
+    <clipPath id="tile"><rect width="512" height="512" rx="104"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="512" height="512" fill="url(#sky)"/>
+    <path d="M0 394h512v118H0z" fill="url(#water)"/>
+    <g><g stroke-linejoin="round">
+  <path d="M117 213h55v139h-55z M120 155h53l-9 42h-53z M190 155h64l47 120 51-120h66l-92 197h-54z" fill="#392141" stroke="#392141" stroke-width="24" transform="translate(2 8)"/>
+  <path d="M117 213h55v139h-55z M120 155h53l-9 42h-53z M190 155h64l47 120 51-120h66l-92 197h-54z" fill="url(#letter)" stroke="#38213F" stroke-width="16" paint-order="stroke fill"/>
+</g></g>
+  </g>
+</svg>

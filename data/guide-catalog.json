@@ -1,5 +1,105 @@
 [
   {
+    "id": "reddit-playbook-cargo-van",
+    "title": "Ride in a cargo van's rear compartment",
+    "category": "Play Guides",
+    "summary": "A community-reported control sequence for riding in the cargo area while a partner drives.",
+    "body": "Set a destination on the map and have your partner drive. The post says to hold movement toward the rear doors while holding Triangle to move into the cargo area.\n\nThis is a reported method, not independently tested. Triangle is the control named in the source; other controller layouts and keyboard bindings have not been verified. The post does not identify every supported van model or a chapter prerequisite.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y4xziz/how_to_sit_in_the_back_of_a_cargo_van_when_there/",
+    "sourceLabel": "u/Daddy_Shr00mz / GTA6_playbook; video credited to Cyber_Cycosis",
+    "sources": [
+      {
+        "label": "u/Daddy_Shr00mz / cargo-van controls (Cyber_Cycosis video credit)",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y4xziz/how_to_sit_in_the_back_of_a_cargo_van_when_there/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "van",
+      "cargo",
+      "partner",
+      "passenger",
+      "controls",
+      "triangle"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Partner driving / control layout dependent",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-vehicle-ownership",
+    "title": "Moses: vehicle registration and first garage",
+    "category": "Vehicles",
+    "summary": "Community-reported Chapter 2 vehicle ownership and garage milestones.",
+    "body": "The Chapter 2 infographic reports two ownership milestones:\n\nMoses: registration opens for untracked cars, with the first registration free.\n\nDaily Driver: awards the Port Gellhorn Station Garage and access to the Vice City Real Estate app.\n\nThese rewards have not been independently tested. The source does not establish which specific models qualify, later fees, garage capacity or an exact location. Confirm the available options in your save. The Karin Futo walkthrough covers a separate Moses request; no additional prerequisite relationship is established here.",
+    "region": "Port Gellhorn",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/",
+    "sourceLabel": "u/Colty_00 / GTA6_playbook, Chapter 2 slide 1; artwork credited to Eric Smash",
+    "sources": [
+      {
+        "label": "u/Colty_00 / Chapter 2 infographic, slide 1 (Eric Smash credit)",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "moses",
+      "cars",
+      "registration",
+      "garage",
+      "ownership",
+      "daily driver",
+      "real estate"
+    ],
+    "steps": [],
+    "minChapter": 2,
+    "access": "chapter",
+    "stage": "Chapter 2 / Moses and Daily Driver",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-brian-meetings",
+    "title": "Brian Heder: Chapter 1 story contacts",
+    "category": "People",
+    "summary": "Community-reported story missions that direct Jason to Brian.",
+    "body": "The Chapter 1 infographic lists Brian as the contact for Hey Arnold!, Down to Earth and Swamped.\n\nThese are community-reported mission leads, not verified coordinates or a repeatable free-roam meeting schedule. Use the active objective in your save to find the meeting point. The source is u/Colty_00's post, with the infographic credited to Eric Smash.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/",
+    "sourceLabel": "u/Colty_00 / GTA6_playbook, Chapter 1 slide 1; artwork credited to Eric Smash",
+    "sources": [
+      {
+        "label": "u/Colty_00 / Chapter 1 infographic, slide 1 (Eric Smash credit)",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "brian",
+      "jason",
+      "story",
+      "contacts",
+      "playbook"
+    ],
+    "steps": [],
+    "minChapter": 1,
+    "access": "chapter",
+    "stage": "Chapter 1 / mission-based contacts",
+    "confidence": "reported"
+  },
+  {
     "id": "vice-city",
     "title": "Vice City",
     "category": "Places",
@@ -2083,5 +2183,471 @@
     "confidence": "reported",
     "access": "unknown",
     "priority": 40
+  },
+  {
+    "id": "reddit-playbook-1y45jyl",
+    "title": "Classic Vice City portal: community route",
+    "category": "Collections",
+    "summary": "A reported power-station puzzle leading to a classic Vice City Easter egg.",
+    "body": "The post credits Memeio with a route starting at the Badger Radio Tower in Key Lento. It describes activating the tower controls, visiting 12 LPL substations in the map's order, then following a message to Reactor 2 at Turtle Head Power Station between 7 PM and 6 AM. The author warns that fast travel or character switching may reset the sequence.\n\nUse the attached source map for the proposed order. The portal, outfit and motorcycle rewards are community claims, not independently reproduced here; exact prerequisites and completion behavior remain unverified.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y45jyl/insane_gta_6_easter_egg_a_hidden_portal_takes_you/",
+    "sourceLabel": "Memeio / posted by u/sayyxf / GTA6_playbook",
+    "sources": [
+      {
+        "label": "Memeio / posted by u/sayyxf",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y45jyl/insane_gta_6_easter_egg_a_hidden_portal_takes_you/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y51lth",
+    "title": "Bank robbery: community gameplay reference",
+    "category": "Money",
+    "summary": "A bank-robbery clip shared by the community, with a locally saved preview.",
+    "body": "The uploader presents this as a quick bank robbery and claims a $150,000 payout. The post provides no written route, equipment list or unlock conditions, so this is a gameplay reference rather than a tested farming method. The claimed payout and timing are not guaranteed.\n\nOnly the poster image is bundled: the browser exposed a temporary blob playback source rather than a downloadable video URL. Open the original source to watch the clip.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y51lth/probably_the_cleanest_bank_robbery_youll_see_in/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y51lth/probably_the_cleanest_bank_robbery_youll_see_in/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y3ckve",
+    "title": "Rare vehicles: nine location references",
+    "category": "Vehicles",
+    "summary": "A community gallery of rare-car locations across Leonida.",
+    "body": "The gallery presents nine vehicle-location leads. Its author says unowned or unregistered cars can be stored in garages and describes registration through Paint n Spray. Treat that as a reported ownership method, not a guarantee that every pictured vehicle qualifies.\n\nUse the attached images to inspect the individual locations. Spawn timing, chapter access, registration costs and repeatability have not been independently checked.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y3ckve/guide_gta_6_has_9_secret_car_locations_you_need/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y3ckve/guide_gta_6_has_9_secret_car_locations_you_need/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y46vbc",
+    "title": "Purple nitrous car: key-cloner guide",
+    "category": "Vehicles",
+    "summary": "A source gallery for a reported vehicle, cash and silenced-pistol reward.",
+    "body": "The author says players missing the car-key cloning ability need to progress through Chapter 3 and help Randy to receive a key cloner. The attached gallery contains the proposed route for a purple nitrous car and associated rewards.\n\nThe source calls the vehicle a McLaren and claims $10,000 plus a special silenced pistol. Model identity, reward amounts, rarity and exact unlock conditions are not independently verified; check the available mission and key-cloning options in your save.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y46vbc/guide_how_to_get_gta_6_rare_purple_nitrous/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y46vbc/guide_how_to_get_gta_6_rare_purple_nitrous/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Chapter 3+ / source reference",
+    "confidence": "reported",
+    "minChapter": 3
+  },
+  {
+    "id": "reddit-playbook-1y4lei5",
+    "title": "Duffel bags: reported pickup-capacity trick",
+    "category": "Money",
+    "summary": "A player-reported timing trick for increasing the value carried in one bag.",
+    "body": "The player reports filling a bag to a displayed value of 8,400, then quickly pressing the pickup control twice beside a pair of nearby packages. They say this raises the bag to 10,800 instead of the usual 9,600 before a new bag appears.\n\nNo specific controller button, platform or game version is documented. This may be timing-sensitive or patch-dependent, and the higher capacity has not been independently reproduced.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y4lei5/duffel_bag_trick_to_increase_from_9600_to_10800/",
+    "sourceLabel": "u/Flashy_Shape9422 / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/Flashy_Shape9422",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y4lei5/duffel_bag_trick_to_increase_from_9600_to_10800/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y2v2yb",
+    "title": "Key Lento: illustrated location reference",
+    "category": "Places",
+    "summary": "Ten community images covering points of interest in Key Lento.",
+    "body": "AdamHartGaming's image set is a visual reference for exploring Key Lento. Open the individual images to inspect the locations and annotations.\n\nThe post does not provide a separate written route or verified completion checklist. Its title claims comprehensive coverage, but this catalog does not treat the set as exhaustive or establish when every location becomes accessible.",
+    "region": "Leonida Keys",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y2v2yb/everything_in_key_lento/",
+    "sourceLabel": "u/AdamHartGaming / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/AdamHartGaming",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y2v2yb/everything_in_key_lento/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y4qd07",
+    "title": "Pursuing NPC: community encounter footage",
+    "category": "Collections",
+    "summary": "A recorded encounter with an NPC described by the uploader as unkillable.",
+    "body": "The uploader shares an encounter after what they describe as several hours of searching. The clip is preserved as a community observation, not proof of an invincible enemy or a repeatable spawn rule.\n\nThe written post gives no exact location, trigger or escape method. Watch the footage for context; no coordinates, rewards or prerequisites are inferred from the title.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y4qd07/there_is_an_unkillable_npc_that_is_hunting_down/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y4qd07/there_is_an_unkillable_npc_that_is_hunting_down/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y54cyw",
+    "title": "Story chapters: complete source image set",
+    "category": "Story",
+    "summary": "All 15 downloaded community infographic slides covering Chapters 1 through 5.",
+    "body": "This preserves the full five-chapter source gallery, with three slides per chapter. It includes mission names, optional activities and claimed secrets, including later-story details.\n\nThe source calls this a 100% guide, but commenters disagree about missable activities and completion requirements. Treat it as a community reference, not a verified completion checklist. It does not replace iVice's separate chapter-transition roadmap.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/",
+    "sourceLabel": "Eric Smash / posted by u/Colty_00 / GTA6_playbook",
+    "sources": [
+      {
+        "label": "Eric Smash / posted by u/Colty_00",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Chapter 1+ / source reference",
+    "confidence": "reported",
+    "minChapter": 1
+  },
+  {
+    "id": "reddit-playbook-1y46y11",
+    "title": "Permanent stat boosts: three reported activities",
+    "category": "Play Guides",
+    "summary": "Community leads for hidden activities said to improve player stats.",
+    "body": "The post describes three routes: a nighttime abduction and alien rescue in Kelly County; The Final Flush, starting from a bathroom QR code and leading through Dr. Merle to a facility in Gloriana Key; and a marked case inside a Lummox County shipping container that reportedly begins a dreamlike challenge.\n\nThe author associates these activities with permanent stat upgrades and explicitly calls the third lead the weakest-sourced. Neither the rewards nor the prerequisites have been independently tested. Use the images as leads, not guaranteed upgrade instructions.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y46y11/guide_3_ways_to_get_stronger_forever_in_gta6/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y46y11/guide_3_ways_to_get_stronger_forever_in_gta6/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y3c4h4",
+    "title": "Companion calls after a car crash",
+    "category": "Play Guides",
+    "summary": "A community video exploring a contextual call between Lucia and Jason.",
+    "body": "The uploader describes crashing a car while controlling Jason, switching to Lucia and immediately calling him. The attached clip records the resulting interaction.\n\nThis is a contextual-dialogue reference, not a mission requirement. The post does not establish a cooldown, exact timing window or chapter restriction, and the interaction has not been independently reproduced.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y3c4h4/what_happens_when_you_switch_to_lucia_and_call/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y3c4h4/what_happens_when_you_switch_to_lucia_and_call/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y4ysyr",
+    "title": "Lucia's voluminous curls: Oomph salon",
+    "category": "Places",
+    "summary": "An answered community question about a specific hairstyle and salon.",
+    "body": "The original poster's edit identifies the pictured hairstyle as Voluminous Curls at Oomph. Commenters place the salon in the northern part of Vice Beach near a gym, with another reporting that they obtained the style there.\n\nThe picture is a visual identification aid. Price, precise map position and unlock requirements are not verified. Conflicting speculation about preorder or chapter access is not treated as a requirement.",
+    "region": "Vice City",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y4ysyr/where_do_i_find_this_hairstyle_for_lucia/",
+    "sourceLabel": "u/darkzaddie; location corroborated in thread comments / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/darkzaddie; location corroborated in thread comments",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y4ysyr/where_do_i_find_this_hairstyle_for_lucia/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y2aaso",
+    "title": "Money glitch: unverified video demonstration",
+    "category": "Money",
+    "summary": "A locally saved clip advertising a money exploit, without verified instructions.",
+    "body": "The source is a video-only post claiming an unlimited-money glitch. There is no accompanying written procedure or documented game version. The video is available for reference, but the exploit, payout and repeatability have not been independently verified.\n\nDo not treat this as a guaranteed income recommendation. Any behavior shown may change between patches; no chapter access or required equipment is inferred from the title.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y2aaso/gta_6_unlimited_money_glitch/",
+    "sourceLabel": "u/GTA_VI_CENTRAL / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/GTA_VI_CENTRAL",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y2aaso/gta_6_unlimited_money_glitch/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y51xgy",
+    "title": "Ghosts and aliens: illustrated location leads",
+    "category": "Collections",
+    "summary": "Six source images covering reported ghost encounters and UFO sightings.",
+    "body": "The attached community gallery provides visual leads for ghost and alien encounters. Inspect the individual location images before traveling.\n\nThe source describes its coverage as complete, but neither completeness nor the encounter conditions have been independently verified. No exact spawn times, puzzle solutions or rewards are inferred from the post's title.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y51xgy/guide_all_gta6_ghost_alien_locations/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y51xgy/guide_all_gta6_ghost_alien_locations/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y04pyz",
+    "title": "Cheat codes: community image reference",
+    "category": "Play Guides",
+    "summary": "Five downloaded source images describing reported cheat-code inputs.",
+    "body": "This is the community's illustrated cheat-code reference. The source provides its information in images rather than a separate written explanation; view the pages for the displayed inputs.\n\nCodes, platform mappings and effects on achievements or saved progress have not been independently checked. No input sequence is transcribed as verified, and unknown platform equivalents are not invented.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y04pyz/gta6_cheatcodes_are_back_full_cheat_code_guide_on/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y04pyz/gta6_cheatcodes_are_back_full_cheat_code_guide_on/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y4gy61",
+    "title": "Port Gellhorn yard sale: Arthur's hat lead",
+    "category": "Collections",
+    "summary": "A player-reported cosmetic find at a yard sale in southern Port Gellhorn.",
+    "body": "The player reports finding a hat they identify as Arthur Morgan's at the first yard sale they checked, near the southern end of Port Gellhorn. The attached screenshot preserves the visual reference.\n\nThis is a location lead, not a guaranteed stock listing. The exact address, sale schedule, price and conditions for the item to appear are not documented.",
+    "region": "Port Gellhorn",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y4gy61/insane/",
+    "sourceLabel": "u/Mojo3472 / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/Mojo3472",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y4gy61/insane/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
+  },
+  {
+    "id": "reddit-playbook-1y2m3mw",
+    "title": "Mysterious creatures: location image set",
+    "category": "Collections",
+    "summary": "Five community images presenting reported creature-encounter locations.",
+    "body": "The source shares an illustrated set of mysterious-creature location leads. Use the attached images as community observations to investigate, not as a verified bestiary.\n\nThe post contains no written encounter requirements. Exhaustive coverage, precise spawn conditions and rewards have not been established, and some leads may overlap with other mystery guides.",
+    "region": "",
+    "sourceType": "community",
+    "sourceUrl": "https://www.reddit.com/r/GTA6_playbook/comments/1y2m3mw/here_are_locations_of_every_mysterious_creature/",
+    "sourceLabel": "u/gta6ixer / GTA6_playbook",
+    "sources": [
+      {
+        "label": "u/gta6ixer",
+        "url": "https://www.reddit.com/r/GTA6_playbook/comments/1y2m3mw/here_are_locations_of_every_mysterious_creature/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "reddit",
+      "community",
+      "playbook",
+      "media",
+      "reference"
+    ],
+    "steps": [],
+    "access": "unknown",
+    "stage": "Community reference / access unverified",
+    "confidence": "reported"
   }
 ]

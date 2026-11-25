@@ -1,6 +1,20 @@
 # Community research — November 25, 2026
 
-Public Reddit discussions and linked video titles informed these guides. No automated collection or copied media. Video footage was not independently reviewed. Each entry is community/reported; source threads may contain spoilers.
+Public Reddit discussions, linked video titles and browser-reviewed infographics informed these guides. Summaries are original; video gameplay claims were not independently verified. Each entry is community/reported; source threads may contain spoilers. Source images, thumbnails and videos were downloaded and connected to the native app at the user's explicit request; see the [download inventory](data/community-media/README.md).
+
+## Score-filtered batch
+- User-selected scope: guides and useful gameplay references with a displayed score of at least 50; no memes or general discussion.
+- The top/all scan captured 77 distinct posts, including 58 meeting the score cutoff. Sixteen practical source posts were imported; the [review record](data/community-media/playbook-review.json) retains scores, canonical URLs and exclusion reasons.
+- The native app now includes 71 batch images/posters and three batch videos. The full 15-slide chapter gallery is included. The bank demonstration is thumbnail-only; its claimed payout is not a tested farming recommendation.
+- Written post content and the answered hairstyle question support the original summaries. Image-only and video-only sources remain labeled references, without invented coordinates or instructions. All new batch entries are spoiler-gated and excluded from verified-income claims.
+- Recorded scores are a review-time snapshot, not endorsements or a guarantee of accuracy. Existing earlier imports below this batch's cutoff were not deleted.
+
+## Playbook imports
+- Brian Heder's Chapter 1 contacts and Moses's Chapter 2 registration/garage milestones: [u/Colty_00's gallery](https://www.reddit.com/r/GTA6_playbook/comments/1y54cyw/gta_6_complete_100_story_guide_all_5_chapters/), artwork credited to Eric Smash. Chapter 1 slide 1 and Chapter 2 slide 1 were visually reviewed. Both guides are spoiler-gated and reported, not independently verified. The existing chapter roadmap was not changed.
+- Cargo-van passenger controls: [u/Daddy_Shr00mz's post](https://www.reddit.com/r/GTA6_playbook/comments/1y4xziz/how_to_sit_in_the_back_of_a_cargo_van_when_there/), video credited to Cyber_Cycosis. The written method was reviewed; the video and alternate control bindings were not verified.
+- Comments disagree about completion requirements and missable activities. No definitive 100% checklist was imported.
+
+## Earlier imports
 
 | Entry | Category | Stage | Spoilers | Source |
 |---|---|---|---|---|

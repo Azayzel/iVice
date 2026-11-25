@@ -18,16 +18,42 @@ These are **historical screenshots captured by Playwright in GitHub Actions** fr
 
 ## What the guide does
 
-- **Make money:** source-linked route recommendations: early car sales after the Moses introduction, managing pocket cash, robberies, and later vault jobs. Each includes unlock stage, prerequisites, risks and per-profile checklists.
-- **Story:** five-chapter tracker, optional-mission sweeps and chapter-transition alerts, with spoilers hidden by default.
+- **Make money:** source-linked route references with reported unlock stages, prerequisites and risks.
+- **Story:** chapter roadmaps separate transition triggers and required milestones from optional tasks. Mission names require a separate reveal; the app does not read your save or estimate remaining time.
 - **Best vehicles:** comparisons for cars and getaways, airplanes/helicopters, speedboats and off-road vehicles. Rankings distinguish demonstrated in-game facts from launch-week reporting; no fabricated top speeds.
 - **Wikipedia-style library:** character and region references with links to original sources (including Brian Heder on Rockstar and Fandom), search, categories and bookmarks.
-- **Collectibles & discoveries:** private checklists, notes, completion counts and multiple playthroughs; no sign-in or internet connection is needed to use the bundled material.
+- **Discoveries:** source-linked references and per-playthrough bookmarks; no sign-in or internet connection is needed to read bundled material.
 - **ViceFiles integration:** opt-in manual sync of *moderator-approved* guide entries via a read-only API contract. It never posts user notes to the server.
 
 ### What counts as a recommendation?
 
 `official` denotes a summary based on Rockstar's public material. `community`/`reported` means iVice links to independently published walkthroughs or launch-week research, but has *not* personally measured the result. `template` is a user checklist, **not a game fact**. All articles have original descriptions and link to third-party material rather than copying it. Content status can be corrected as better evidence arrives.
+
+### Current native experience
+
+Home uses a phone-inspired launcher: one chapter widget, color-coded circular category icons, search, and compact reference lists. Chapter and region controls are available from the region selector; Story also exposes chapter selection. Reading screens use divider-based rows and bundled Outfit typography, with a system-font fallback while fonts load or if loading fails. Existing theme selections, bookmarks, spoiler controls, and per-playthrough data are preserved.
+
+Navigation is **Home, Library, Story, Settings**. Notes, Track, guide checkboxes and completion bars have been removed. Template entries are hidden. Existing SQLite notes and progress are retained for compatibility, but are no longer loaded into the interface or used to suppress recommendations. Earlier screenshots and feature history below describe the previous UI; the standalone browser demo has not been updated to match.
+
+Native navigation uses short fade/slide transitions and spring press feedback through React Native Animated, without a web motion dependency. The system Reduce Motion setting disables these effects and the guide modal's slide. The tab bar owns the bottom safe-area background while keeping buttons above the home indicator. Physical-device checks should include rapid tab switches, press cancellation while scrolling, and toggling Reduce Motion while the app is open.
+
+Chapter roadmaps in [src/chapters.ts](src/chapters.ts) summarize PowerPyx's mission index and individual transition walkthroughs, reviewed November 25, 2026. These are reported findings, not official Rockstar rules or independently play-tested results. Optional examples are not an exhaustive missables guide. Chapter 5 is treated as the final chapter, not as a transition to a fabricated Chapter 6.
+
+Library now separates an **Encyclopedia** of named subjects from general **Guides**, with an **All** search. Names and aliases rank ahead of body-text matches. People, locations, vehicles and weapons can be opened from Home or filtered in Library. Subject pages show images, known details, location/acquisition gaps, sources and related entries with back navigation. Search results, counts and related links respect the existing chapter and spoiler rules. No stats, prices, spawn conditions or unlock requirements are inferred from images.
+
+### Screenshot library
+
+The user-supplied originals remain unchanged under [data/GTAVI_Screenshots](data/GTAVI_Screenshots). [data/library-media.json](data/library-media.json) explicitly maps 137 photos to 20 subjects: eight people, six locations, five vehicles and one weapon entry. The other 64 images remain unassigned rather than being attached to an unrelated subject. The image-only entries use names from the supplied filenames and are labeled as image references, not independently verified game data. Existing sourced profiles retain their original provenance; their images are labeled separately.
+
+Run `npm run media` after adding or changing a mapping. It builds metadata-stripped JPEGs (maximum 1440px), small thumbnails and [src/library-media.generated.ts](src/library-media.generated.ts) with static Metro asset references. Only these optimized files are imported by the app, not the 4K originals. The current mapped set is about 18.8 MB including thumbnails. `npm run media:check`, also included in `npm run check`, validates the mappings, generated registry and image bounds; it requires the original screenshot directory.
+
+Galleries offer previous/next controls and a full-screen viewer with iOS pinch zoom. Additional photos require a separate warning confirmation while global spoilers are hidden, since they have not been individually reviewed for story spoilers. Gallery interaction, full-screen zoom and nested modal dismissal still require physical-device testing.
+
+These supplied images are integrated for local development. Their addition does not establish permission for public redistribution. Verify image rights before publishing the app or screenshot assets.
+
+### Brand assets
+
+The supplied SVG originals live in `src/ivice-*.svg`. Run `npm run icons` after editing them to regenerate the mobile icon (1024px), header logo (128px) and favicon (32px). The maskable SVG is preserved for a future web manifest. Expo uses the mobile PNG for native builds; Expo Go keeps its own installed home-screen icon. The header logo updates during development without a native rebuild.
 
 ## Quick start
 

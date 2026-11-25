@@ -1,0 +1,139 @@
+[
+    {
+        "id": "boobie-ike",
+        "title": "Boobie Ike",
+        "kind": "Person",
+        "folder": "People/Boobie Ike"
+    },
+    {
+        "id": "brian-heder",
+        "title": "Brian Heder",
+        "kind": "Person",
+        "folder": "People/Brian Heder"
+    },
+    {
+        "id": "cal-hampton",
+        "title": "Cal Hampton",
+        "kind": "Person",
+        "folder": "People/Cal Hampton"
+    },
+    {
+        "id": "dre-quan-priest",
+        "title": "Dre'Quan Priest",
+        "kind": "Person",
+        "folder": "People/DreQuan Priest"
+    },
+    {
+        "id": "jason-duval",
+        "title": "Jason Duval",
+        "kind": "Person",
+        "folder": "People/Jason Duval"
+    },
+    {
+        "id": "lucia-caminos",
+        "title": "Lucia Caminos",
+        "kind": "Person",
+        "folder": "People/Lucia Caminos"
+    },
+    {
+        "id": "raul-bautista",
+        "title": "Raul Bautista",
+        "kind": "Person",
+        "folder": "People/Raul Bautista"
+    },
+    {
+        "id": "real-dimez",
+        "title": "Real Dimez",
+        "kind": "Person",
+        "folder": "People/Real Dimez"
+    },
+    {
+        "id": "ambrosia",
+        "title": "Ambrosia",
+        "kind": "Location",
+        "folder": "Places/Ambrosia"
+    },
+    {
+        "id": "grassrivers",
+        "title": "Grassrivers",
+        "kind": "Location",
+        "folder": "Places/Grassrivers"
+    },
+    {
+        "id": "leonida-keys",
+        "title": "Leonida Keys",
+        "kind": "Location",
+        "folder": "Places/Leonida Keys"
+    },
+    {
+        "id": "mount-kalaga",
+        "title": "Mount Kalaga National Park",
+        "kind": "Location",
+        "folder": "Places/Mount Kalaga National Park"
+    },
+    {
+        "id": "port-gellhorn",
+        "title": "Port Gellhorn",
+        "kind": "Location",
+        "folder": "Places/Port Gellhorn"
+    },
+    {
+        "id": "vice-city",
+        "title": "Vice City",
+        "kind": "Location",
+        "folder": "Places/Vice City"
+    },
+    {
+        "id": "media-grotti-cheetah",
+        "title": "Grotti Cheetah",
+        "kind": "Vehicle",
+        "folder": "",
+        "prefix": "ULTIMATE_EDITION_GROTTI_CHEETAH_",
+        "createEntry": true,
+        "vehicleClass": "Car"
+    },
+    {
+        "id": "media-squalo",
+        "title": "Squalo",
+        "kind": "Vehicle",
+        "folder": "",
+        "prefix": "ULTIMATE_EDITION_SQUALO_",
+        "createEntry": true,
+        "vehicleClass": "Boat"
+    },
+    {
+        "id": "media-vapid-buggy",
+        "title": "Vapid Buggy",
+        "kind": "Vehicle",
+        "folder": "",
+        "prefix": "ULTIMATE_EDITION_VAPID_BUGGY_",
+        "createEntry": true,
+        "vehicleClass": "Off-road"
+    },
+    {
+        "id": "media-vapid-ganado",
+        "title": "Vapid Ganado Retro Build",
+        "kind": "Vehicle",
+        "folder": "",
+        "prefix": "ULTIMATE_EDITION_VAPID_GANADO_RETRO_BUILD_",
+        "createEntry": true,
+        "vehicleClass": "Car"
+    },
+    {
+        "id": "media-vapid-stanier",
+        "title": "Vapid Stanier",
+        "kind": "Vehicle",
+        "folder": "",
+        "prefix": "VINTAGE_VICE_CITY_PACK_VAPID_STANIER_",
+        "createEntry": true,
+        "vehicleClass": "Car"
+    },
+    {
+        "id": "media-morgan-revolvers",
+        "title": "Hawk & Little Morgan Revolvers",
+        "kind": "Weapon",
+        "folder": "",
+        "prefix": "ULTIMATE_EDITION_HAWK_AND_LITTLE_MORGAN_REVOLVERS_",
+        "createEntry": true
+    }
+]

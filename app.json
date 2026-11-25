@@ -4,6 +4,10 @@
     "slug": "ivice",
     "scheme": "ivice",
     "version": "0.1.0",
+    "icon": "./src/ivice-mobile.png",
+    "web": {
+      "favicon": "./src/ivice-favicon.png"
+    },
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "ios": {
@@ -15,7 +19,9 @@
       "edgeToEdgeEnabled": true
     },
     "plugins": [
-      "expo-sqlite"
+      "expo-sqlite",
+      "expo-font",
+      "expo-video"
     ],
     "extra": {
       "projectName": "iVice",

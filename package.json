@@ -7,22 +7,31 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "icons": "node scripts/build-icons.mjs",
+    "media": "node scripts/build-library-media.mjs",
+    "media:check": "node scripts/build-library-media.mjs --check",
+    "maps": "node scripts/build-location-maps.mjs",
+    "maps:check": "node scripts/build-location-maps.mjs --check",
     "typecheck": "tsc --noEmit",
     "test": "node --test scripts/*.test.mjs",
-    "check": "npm run test && npm run typecheck"
+    "check": "npm run test && npm run typecheck && npm run media:check && npm run maps:check"
   },
   "dependencies": {
+    "@expo-google-fonts/outfit": "^0.4.3",
+    "@expo/vector-icons": "^15.0.0",
     "expo": "^58.0.26",
+    "expo-font": "~58.0.12",
+    "expo-linear-gradient": "~58.0.4",
     "expo-sqlite": "~58.0.18",
     "expo-status-bar": "~58.0.5",
-    "expo-linear-gradient": "~58.0.4",
+    "expo-video": "~58.0.14",
     "react": "19.3.0",
     "react-native": "0.88.1",
-    "react-native-safe-area-context": "~5.10.1",
-    "@expo/vector-icons": "^15.0.0"
+    "react-native-safe-area-context": "~5.11.1"
   },
   "devDependencies": {
     "@types/react": "^19.2.0",
+    "sharp": "^0.35.5",
     "typescript": "~6.0.0"
   },
   "description": "Offline-first GTA VI second-screen companion guide"

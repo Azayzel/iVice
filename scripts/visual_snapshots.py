@@ -41,7 +41,7 @@ def run(verify:bool):
         page.get_by_text('PLAY SMARTER.').wait_for()
         assert page.get_by_text('MAKE MONEY').count()==1
         shot(page,'home-mobile.png',verify)
-        page.get_by_role('button',name='LIBRARY').click()
+        page.locator('[data-tab="Library"]').click()
         page.get_by_role('searchbox').fill('speedboat')
         assert page.get_by_text('Speedboats: coastal travel picks').count()==1
         page.get_by_role('searchbox').fill('')
@@ -57,7 +57,7 @@ def run(verify:bool):
         assert page.get_by_role('checkbox').first.is_checked()
         page.reload()
         page.locator('[data-entry="money-stolen-cars"]').count() # Home can return to this via Library
-        page.get_by_role('button',name='LIBRARY').click()
+        page.locator('[data-tab="Library"]').click()
         page.locator('[data-entry="money-stolen-cars"]').click()
         assert page.get_by_role('checkbox').first.is_checked(), 'Checklist progress must persist in browser preview'
         desktop=browser.new_context(viewport={'width':1440,'height':1000},device_scale_factor=1,reduced_motion='reduce')

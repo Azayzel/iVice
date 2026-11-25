@@ -4,21 +4,22 @@ import {replaceRemoteGuides} from './db';
 
 const CATEGORIES=['Places','People','Play Guides','Collections','Money','Story','Vehicles'];
 const TYPES=['official','community','template'];
-const isHttpsSource=(url:unknown)=>url===null||(typeof url==='string' && /^https:\/\//i.test(url) && url.length<=1000);
-function isGuide(value:unknown):value is GuideEntry {
+const isHttpsSource=(url:unknown)=>{if(typeof url!=='string'||url.length>1000)return false;try{const parsed=new URL(url);return parsed.protocol==='https:'&&Boolean(parsed.hostname)&&!parsed.username&&!parsed.password}catch{return false}};
+const isRecord=(v:unknown):v is Record<string,unknown>=>typeof v==='object'&&v!==null&&!Array.isArray(v);
+export function isGuide(value:unknown):value is GuideEntry {
   if(!value || typeof value!=='object')return false;
   const e=value as Partial<GuideEntry>;
   return typeof e.id==='string' && /^vf-[a-z0-9-]{2,96}$/.test(e.id) && e.sourceType==='community' &&
     typeof e.title==='string' && e.title.length>0 && e.title.length<=140 && typeof e.summary==='string' && e.summary.length<=500 &&
     typeof e.body==='string' && e.body.length<=8000 && CATEGORIES.includes(e.category??'') &&
-    TYPES.includes(e.sourceType??'') && isHttpsSource(e.sourceUrl) && typeof e.spoiler==='boolean' &&
+    TYPES.includes(e.sourceType??'') && (e.sourceUrl===null||isHttpsSource(e.sourceUrl)) && typeof e.region==='string' && e.region.length<=120 && (e.sourceLabel===null||(typeof e.sourceLabel==='string'&&e.sourceLabel.length<=100)) && typeof e.spoiler==='boolean' &&
     Array.isArray(e.tags) && e.tags.length<=20 && e.tags.every(t=>typeof t==='string' && t.length<=50) &&
-    (!e.sources || (Array.isArray(e.sources) && e.sources.length<=6 && e.sources.every(s=>typeof s.label==='string' && s.label.length<=100 && isHttpsSource(s.url) && s.url!==null))) &&
+    (e.sources===undefined || (Array.isArray(e.sources) && e.sources.length<=6 && e.sources.every(s=>isRecord(s)&&typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=100 && isHttpsSource(s.url)))) && (isHttpsSource(e.sourceUrl)||Boolean(e.sources?.length)) &&
     (!e.stage || (typeof e.stage==='string' && e.stage.length<=100)) &&
     (!e.vehicleClass || (typeof e.vehicleClass==='string' && e.vehicleClass.length<=50)) &&
     (!e.recommendation || (typeof e.recommendation==='string' && e.recommendation.length<=80)) &&
     (!e.confidence || ['reported','confirmed','template'].includes(e.confidence)) &&
-    Array.isArray(e.steps) && e.steps.length<=100 && e.steps.every(s=>typeof s.id==='string' && /^[a-z0-9-]{1,80}$/.test(s.id) && typeof s.label==='string' && s.label.length<=200);
+    Array.isArray(e.steps) && e.steps.length<=100 && e.steps.every(s=>isRecord(s)&&typeof s.id==='string' && /^[a-z0-9-]{1,80}$/.test(s.id) && typeof s.label==='string' && s.label.trim().length>0 && s.label.length<=200) && new Set(e.steps.map(s=>s.id)).size===e.steps.length;
 }
 export async function syncCatalog(db:SQLiteDatabase) {
   const base=process.env.EXPO_PUBLIC_API_URL?.trim();

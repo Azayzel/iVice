@@ -17,3 +17,6 @@
 - Populate Wiki from reviewed guide documents and add user correction/flag workflow; do not scrape Fandom or Reddit wholesale without proper permission.
 - Confirm GitHub Pages Source=GitHub Actions and deploy success; create/enable actual GitHub Wiki independently if desired.
 - CI-generated browser previews and goldens; iOS / Android simulator screenshots and visual regression before app-store release.
+
+- Run native device flows (iOS and Android): cold launch offline, save/reopen checklist and notes, switch and delete profiles, bookmark/unbookmark, spoiler protection, and sync failures. Browser-preview checks do not cover native SQLite or React Native interactions.
+- Add independently measured vehicle stats, acquisition locations, and verified mission/collectible walkthroughs. Never label estimated top speeds as measured.

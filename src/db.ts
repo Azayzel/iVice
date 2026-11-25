@@ -82,10 +82,10 @@ export async function removeNote(db:SQLiteDatabase,profileId:string,id:string) {
 export async function replaceRemoteGuides(db:SQLiteDatabase,entries:GuideEntry[]) {
   if (entries.some(item => !item.id.startsWith('vf-') || item.sourceType !== 'community'))
     throw new Error('Remote guides must be curated community entries with vf- IDs');
-  await db.withTransactionAsync(async()=>{
-    await db.runAsync("DELETE FROM guides WHERE origin='remote'");
+  await db.withExclusiveTransactionAsync(async(tx)=>{
+    await tx.runAsync("DELETE FROM guides WHERE origin='remote'");
     for (const item of entries) {
-      await db.runAsync("INSERT INTO guides(id,payload,origin) VALUES(?,?,'remote') ON CONFLICT(id) DO UPDATE SET payload=excluded.payload WHERE guides.origin='remote'",
+      await tx.runAsync("INSERT INTO guides(id,payload,origin) VALUES(?,?,'remote') ON CONFLICT(id) DO UPDATE SET payload=excluded.payload WHERE guides.origin='remote'",
         item.id,JSON.stringify(item));
     }
   });

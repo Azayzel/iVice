@@ -91,3 +91,6 @@ Expected payload:
 iVice is an **unofficial fan-made companion**, not affiliated with Rockstar Games, Take-Two, or Fandom. No copyrighted artwork, map screenshots, gameplay videos, or Fandom article text are bundled. Before publishing on app stores, assess trademark, third-party content licenses, terms for use, privacy policy and moderation obligations.
 
 This is an open-source starter; choose a LICENSE before accepting outside contributions. See [TODO](TODO.md) for the planned map, cloud sync, verified player-submitted guides, native snapshots and platform QA.
+### Native flow hardening
+
+Saved guides now have a dedicated Library filter and home shortcut. Search matches multiple terms across the guide body, title, tags, region and vehicle class. Profile changes, note mutations, checklist updates and sync are serialized to prevent cross-playthrough writes; unfinished note drafts are cleared on profile changes. Preview screenshots depict the separate HTML prototype; they are not native runtime validation. Content recommendations are source-linked launch reports, not play-tested rankings.

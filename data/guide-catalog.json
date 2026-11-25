@@ -703,24 +703,24 @@
     "id": "money-stolen-cars",
     "title": "Quick cash: sell stolen cars",
     "category": "Money",
-    "summary": "Chapter 2: an accessible, repeatable early cash route after unlocking Moses.",
-    "body": "Launch-week walkthroughs report that Moses buys stolen vehicles after his Chapter 2 introduction. Compare vehicle value, travel time, police attention and sale cooldown. Avoid assuming every car is eligible; this is a reported strategy, not a guaranteed payout.",
+    "summary": "Chapter 2: unlock Moses, then sell eligible untracked vehicles in Port Gellhorn.",
+    "body": "After the Chapter 2 Moses introduction, the garage in Port Gellhorn accepts eligible cars without trackers. The mission also unlocks tools for entering cars and registering them. This is an early cash option; prioritize the story over repetitive grinding if you want to unlock more profitable methods in Chapter 3. Reported launch-week information, not independently play-tested by iVice.",
     "region": "General",
     "sourceType": "community",
-    "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/",
     "sourceLabel": "PowerPyx — GTA 6 Money Guide",
     "sources": [
       {
-        "label": "PowerPyx — GTA 6 Money Guide",
-        "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast"
+        "label": "PowerPyx — money guide",
+        "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/"
       },
       {
-        "label": "PC Gamer — Fastest ways to make money",
-        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/"
+        "label": "PowerPyx — Moses walkthrough (mission spoilers)",
+        "url": "https://www.powerpyx.com/gta-6-moses-take-a-vehicle-to-moses-walkthrough/"
       },
       {
-        "label": "GTA Base — Money-making methods",
-        "url": "https://www.gtabase.com/gta-6/articles/how-to-make-money-fast-in-gta-6"
+        "label": "PC Gamer — fence locations",
+        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/"
       }
     ],
     "spoiler": false,
@@ -908,19 +908,19 @@
     "title": "Story route without spoilers",
     "category": "Story",
     "summary": "A chapter-by-chapter progress outline with minimal narrative detail.",
-    "body": "Play main missions in order, while checking the map for time-sensitive side content before advancing major story beats. Mission lists can vary depending on whether brief tasks and optional activities are counted. Use the linked walkthrough for actual sequence details, with spoilers revealed only when you choose.",
+    "body": "The published walkthroughs describe five main chapters. Open the in-game map and use the pink story-book icon to find available story tasks. Complete optional activities before advancing a major transition if completion matters to you. The published mission totals vary because some guides count brief calls, payments and objectives as separate steps. The sources below contain mission names and may reveal plot details.",
     "region": "General",
     "sourceType": "community",
     "sourceUrl": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
     "sourceLabel": "PowerPyx — Full missions walkthrough",
     "sources": [
       {
-        "label": "PowerPyx — Full missions walkthrough",
+        "label": "PowerPyx — full mission walkthrough (spoilers)",
         "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/"
       },
       {
-        "label": "SixTrack — Story walkthrough",
-        "url": "https://sixtrack.app/gta6/walkthrough/"
+        "label": "PC Gamer — mission list (spoilers)",
+        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-mission-list/"
       }
     ],
     "spoiler": false,
@@ -1111,19 +1111,19 @@
     "title": "Fast road cars: emerging picks",
     "category": "Vehicles",
     "summary": "Performance comparisons are preliminary; prioritize measured handling and speed.",
-    "body": "Launch-week lists disagree on the fastest overall car. Look at candidates such as the Progen Emerus and Pfister Comet S2, but do not infer real top speeds from unverified online estimates. iVice will distinguish in-game stat ratings, tested runs, and anecdotal rankings.",
+    "body": "Use the GTA Base database to compare the in-game Speed rating and road handling of sports and supercars. Andrew Node’s Truffade Thrax is reported at 9.2/10 in the Speed stat, but that is a specific variant, not proof of the highest measured road speed. Treat estimated mph rankings as unverified. Select a car for acceleration, handling and your available unlocks rather than a single number.",
     "region": "General",
     "sourceType": "community",
     "sourceUrl": "https://timesaver.gg/tools/gta-6/cars/fastest",
     "sourceLabel": "Timesaver — vehicle speed-stat comparison",
     "sources": [
       {
-        "label": "Timesaver — vehicle speed-stat comparison",
-        "url": "https://timesaver.gg/tools/gta-6/cars/fastest"
+        "label": "GTA Base — vehicle database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
       },
       {
-        "label": "GTA Base — Best cars database",
-        "url": "https://www.gtabase.com/gta-6/vehicles/"
+        "label": "G2A — Speed stat rankings, November 25",
+        "url": "https://www.g2a.com/news/gta-6-news/fastest-cars-in-gta-6/"
       }
     ],
     "spoiler": false,
@@ -1210,7 +1210,7 @@
     "id": "vehicles-aircraft",
     "title": "Planes & helicopters: buyer’s guide",
     "category": "Vehicles",
-    "summary": "Compare aircraft by access, landing room, flight stability and speed.",
+    "summary": "Find named aircraft in the vehicle database and choose fixed-wing or rotorcraft by the route.",
     "body": "Current public aircraft lists are still being tested. Rather than declare an unverified fastest jet, compare available aircraft for the job: fixed-wing for long routes, helicopter for flexible landings, and utility aircraft for exploration.",
     "region": "General",
     "sourceType": "community",
@@ -1218,8 +1218,8 @@
     "sourceLabel": "GTA Base — Plane comparisons",
     "sources": [
       {
-        "label": "GTA Base — Plane comparisons",
-        "url": "https://www.gtabase.com/gta-6/vehicles/best-planes/"
+        "label": "GTA Base — vehicle database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
       }
     ],
     "spoiler": false,
@@ -1258,15 +1258,19 @@
     "title": "Speedboats: coastal travel picks",
     "category": "Vehicles",
     "summary": "Choose watercraft based on coastal runs, handling and passenger needs.",
-    "body": "Boat rankings are still being compiled and published data may differ across sources. Compare fast open-water craft, nimble inflatables and airboats for wetlands. No unsourced top-speed figure is presented as a verified GTA VI measurement.",
+    "body": "Search the vehicle database for a Shitzu Squalo or Speeder 700 GT for open-water candidates, a Seashark for short personal-watercraft trips, or the Airgator Airboat 09 for wetlands. These are candidate use cases, not measured speed rankings or guaranteed spawn points. Choose according to passenger capacity and route; vehicle access varies by progression.",
     "region": "General",
     "sourceType": "community",
     "sourceUrl": "https://www.gtabase.com/gta-6/vehicles/best-boats/",
     "sourceLabel": "GTA Base — Boat comparisons",
     "sources": [
       {
-        "label": "GTA Base — Boat comparisons",
-        "url": "https://www.gtabase.com/gta-6/vehicles/best-boats/"
+        "label": "GTA Base — vehicle database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
+      },
+      {
+        "label": "GTA Addict — named watercraft and rating limitations",
+        "url": "https://gtaaddict.com/gta-6/vehicles/fastest/"
       }
     ],
     "spoiler": false,
@@ -1349,5 +1353,52 @@
     "vehicleClass": "Off-road",
     "confidence": "reported",
     "recommendation": ""
+  },
+  {
+    "id": "money-chapter-three",
+    "title": "Chapter 3: better vehicle sales",
+    "category": "Money",
+    "summary": "Progress into Chapter 3 for standard-tracker sales and higher-value opportunities.",
+    "body": "Launch walkthroughs describe new vehicle-selling options in Chapter 3, including standard-tracker cars. Avoid assuming all vehicles or locations are eligible. Follow the story to unlock additional buyers, then use your in-game phone and map to check available jobs. Compare earnings with the time and risk involved. The detailed source may contain mission names and story spoilers.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/",
+    "sourceLabel": "PowerPyx — GTA 6 Money Guide",
+    "sources": [
+      {
+        "label": "PowerPyx — money guide (chapter details)",
+        "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast/"
+      },
+      {
+        "label": "PC Gamer — fence locations",
+        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-fence-locations/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "money",
+      "cars",
+      "chapter-2",
+      "earnings",
+      "starter"
+    ],
+    "steps": [
+      {
+        "id": "unlock-chapter-three",
+        "label": "Reach Chapter 3"
+      },
+      {
+        "id": "check-eligible-sales",
+        "label": "Check eligible vehicle sales"
+      },
+      {
+        "id": "compare-jobs",
+        "label": "Compare earnings with travel time"
+      }
+    ],
+    "stage": "Chapter 3",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "Unlock before grinding"
   }
 ]

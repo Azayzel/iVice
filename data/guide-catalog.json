@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "vice-city",
+    "title": "Vice City",
+    "category": "Places",
+    "summary": "Neon-lit city streets, entertainment and beachfront districts.",
+    "body": "Start with the official Vice City overview. Use this entry as your personal index for shops, landmarks and verified discoveries you encounter.",
+    "region": "Vice City",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "leonida-keys",
+    "title": "Leonida Keys",
+    "category": "Places",
+    "summary": "Island communities and waterfront life south of the mainland.",
+    "body": "Jason has a connection to the Keys. Use this entry to track places, coastal routes and discoveries you want to revisit.",
+    "region": "Leonida Keys",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "grassrivers",
+    "title": "Grassrivers",
+    "category": "Places",
+    "summary": "Leonida’s distinctive wetlands and wildlife country.",
+    "body": "An ideal region for your own exploration notes, wildlife observations and evidence-backed community findings.",
+    "region": "Grassrivers",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "port-gellhorn",
+    "title": "Port Gellhorn",
+    "category": "Places",
+    "summary": "A rougher stretch of Leonida with its own local character.",
+    "body": "Keep a list of places, activities and leads you discover here. No exact collectibles are claimed in this initial release.",
+    "region": "Port Gellhorn",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "ambrosia",
+    "title": "Ambrosia",
+    "category": "Places",
+    "summary": "A major Leonida destination introduced by Rockstar.",
+    "body": "Mark this region as explored when you visit. Additional guides will be included only after they can be corroborated.",
+    "region": "Ambrosia",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "mount-kalaga",
+    "title": "Mount Kalaga",
+    "category": "Places",
+    "summary": "Leonida’s wild country and outdoor landscapes.",
+    "body": "A reference stop for off-road trips, terrain exploration, and personal map notes.",
+    "region": "Mount Kalaga",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "region",
+      "explore",
+      "official"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Visit this region"
+      },
+      {
+        "id": "2",
+        "label": "Record a notable location"
+      },
+      {
+        "id": "3",
+        "label": "Save a discovery to revisit"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "jason-duval",
+    "title": "Jason Duval",
+    "category": "People",
+    "summary": "One of GTA VI’s two central protagonists.",
+    "body": "Jason spent time in the Army and later found himself in the Keys, working around local drug runners. His story is closely tied to Lucia.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "lucia-caminos",
+    "title": "Lucia Caminos",
+    "category": "People",
+    "summary": "A central protagonist seeking a different future.",
+    "body": "Lucia is released from Leonida Penitentiary and forms a consequential partnership with Jason.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "cal-hampton",
+    "title": "Cal Hampton",
+    "category": "People",
+    "summary": "Jason’s friend with a fascination for conspiracy theories.",
+    "body": "Cal is associated with Jason and Brian, and prefers watching the world from home.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "boobie-ike",
+    "title": "Boobie Ike",
+    "category": "People",
+    "summary": "A Vice City businessman connected to the music scene.",
+    "body": "Boobie owns interests in real estate, nightlife and recording, including a partnership tied to Only Raw Records.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "dre-quan-priest",
+    "title": "Dre’Quan Priest",
+    "category": "People",
+    "summary": "An aspiring music mogul with larger ambitions.",
+    "body": "Dre’Quan is pursuing his music-business goals and works with the Real Dimez.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "real-dimez",
+    "title": "Real Dimez",
+    "category": "People",
+    "summary": "Bae-Luxe and Roxy, a musical duo.",
+    "body": "The duo blends music and social-media savvy and has signed with Only Raw Records.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "raul-bautista",
+    "title": "Raul Bautista",
+    "category": "People",
+    "summary": "A seasoned bank robber always looking for talent.",
+    "body": "Raul takes ambitious risks and brings experience to his crew.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida",
+    "sourceLabel": "Rockstar Games — People & Places",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "official"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — People & Places",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida"
+      }
+    ]
+  },
+  {
+    "id": "brian-heder",
+    "title": "Brian Heder",
+    "category": "People",
+    "summary": "Veteran Keys smuggler, boatyard operator, and an early connection for Jason.",
+    "body": "Brian Heder has a long history of smuggling in the Leonida Keys. He runs operations around a boatyard with Lori, his third wife, and lets Jason live in one of his properties in return for doing some local jobs. This overview uses Rockstar’s official profile; the community-maintained GTA Wiki entry is available as a separate reference.",
+    "region": "",
+    "sourceType": "official",
+    "sourceUrl": "https://www.rockstargames.com/VI/only-in-leonida/brian",
+    "sourceLabel": "Rockstar Games — Brian Heder",
+    "spoiler": false,
+    "tags": [
+      "character",
+      "Leonida Keys",
+      "Jason",
+      "official",
+      "GTA Wiki"
+    ],
+    "steps": [],
+    "sources": [
+      {
+        "label": "Rockstar Games — official profile",
+        "url": "https://www.rockstargames.com/VI/only-in-leonida/brian"
+      },
+      {
+        "label": "GTA Wiki (Fandom) — Brian Heder",
+        "url": "https://gta.fandom.com/wiki/Brian_Heder"
+      }
+    ]
+  },
+  {
+    "id": "guide-first-hour",
+    "title": "First-hour field checklist",
+    "category": "Play Guides",
+    "summary": "A spoiler-safe checklist for your first session.",
+    "body": "This is a player-planning template, not a claim about exact missions or collectibles. Use it to keep your first session organized.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "starter",
+      "planning",
+      "checklist"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Choose your current save profile"
+      },
+      {
+        "id": "2",
+        "label": "Explore the menu and map"
+      },
+      {
+        "id": "3",
+        "label": "Choose a location to investigate"
+      },
+      {
+        "id": "4",
+        "label": "Create a note for something unusual"
+      },
+      {
+        "id": "5",
+        "label": "Bookmark a useful guide"
+      },
+      {
+        "id": "6",
+        "label": "Mark your first exploration stop complete"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-region-tour",
+    "title": "Tour the six known regions",
+    "category": "Play Guides",
+    "summary": "A flexible region-by-region exploration tracker.",
+    "body": "Rockstar introduced these six destinations. This tracker is a personal travel plan, not a canonical completion requirement.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "regions",
+      "checklist"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Vice City"
+      },
+      {
+        "id": "2",
+        "label": "Leonida Keys"
+      },
+      {
+        "id": "3",
+        "label": "Grassrivers"
+      },
+      {
+        "id": "4",
+        "label": "Port Gellhorn"
+      },
+      {
+        "id": "5",
+        "label": "Ambrosia"
+      },
+      {
+        "id": "6",
+        "label": "Mount Kalaga"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-secret-hunting",
+    "title": "Secret-hunting workflow",
+    "category": "Play Guides",
+    "summary": "Capture clues without losing your place in the game.",
+    "body": "When you spot something unusual: note the exact in-game place, record what triggered it, attach a source if published, and avoid treating speculation as verified fact.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "easter eggs",
+      "secrets",
+      "research"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Write down what you found"
+      },
+      {
+        "id": "2",
+        "label": "Record where and when you saw it"
+      },
+      {
+        "id": "3",
+        "label": "Try to reproduce it"
+      },
+      {
+        "id": "4",
+        "label": "Compare against other evidence"
+      },
+      {
+        "id": "5",
+        "label": "Submit a discovery to the community"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-vehicle-log",
+    "title": "Vehicle spotting log",
+    "category": "Collections",
+    "summary": "A flexible personal vehicle collection checklist.",
+    "body": "Add vehicle names and locations to your own Notes as you encounter them. This does not contain fabricated spawn locations or a premature definitive vehicle list.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "vehicles",
+      "collectibles"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Record a first vehicle"
+      },
+      {
+        "id": "2",
+        "label": "Note a favorite vehicle"
+      },
+      {
+        "id": "3",
+        "label": "Save a location to revisit"
+      },
+      {
+        "id": "4",
+        "label": "Find a unique customization"
+      },
+      {
+        "id": "5",
+        "label": "Review vehicle discoveries"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-easter-egg-log",
+    "title": "Easter egg hunt",
+    "category": "Collections",
+    "summary": "Keep track of your own hidden discoveries.",
+    "body": "A private, spoiler-controlled checklist for mystery hunting. Specific Easter eggs enter the database only with sourced evidence.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "secrets",
+      "easter eggs"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Spot a potential clue"
+      },
+      {
+        "id": "2",
+        "label": "Capture proof"
+      },
+      {
+        "id": "3",
+        "label": "Try a second test"
+      },
+      {
+        "id": "4",
+        "label": "Check whether it is verified"
+      },
+      {
+        "id": "5",
+        "label": "Mark a discovery documented"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-mission-notes",
+    "title": "Mission notes",
+    "category": "Play Guides",
+    "summary": "A spoiler-safe planning workspace.",
+    "body": "Use Notes to record mission preparation and any non-spoiler reminders. Detailed walkthroughs can be delivered as individually spoiler-flagged entries later.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "missions",
+      "walkthroughs"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Make a mission prep note"
+      },
+      {
+        "id": "2",
+        "label": "Add a reminder for later"
+      },
+      {
+        "id": "3",
+        "label": "Record a useful strategy"
+      },
+      {
+        "id": "4",
+        "label": "Complete a personal mission goal"
+      }
+    ],
+    "sources": []
+  },
+  {
+    "id": "guide-evidence",
+    "title": "How verification works",
+    "category": "Play Guides",
+    "summary": "Understand what counts as a reliable finding.",
+    "body": "ViceFiles differentiates official source material, community-verified findings, and unverified leads. Each entry should keep a permanent source link, a spoiler marker, and an editorial status.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "spoiler": false,
+    "tags": [
+      "verified",
+      "sources",
+      "wiki"
+    ],
+    "steps": [],
+    "sources": []
+  },
+  {
+    "id": "guide-spoiler-sample",
+    "title": "Private spoiler-safe discovery log",
+    "category": "Play Guides",
+    "summary": "A template for writing down clues without accidentally revealing them in the guide.",
+    "body": "When you uncover a real in-game secret, record the evidence and location in your personal notes. This entry is a product demo, not a claim about a GTA VI secret.",
+    "region": "",
+    "sourceType": "template",
+    "sourceUrl": null,
+    "sourceLabel": null,
+    "sources": [],
+    "spoiler": true,
+    "tags": [
+      "spoiler",
+      "template",
+      "notes"
+    ],
+    "steps": [
+      {
+        "id": "1",
+        "label": "Write a private clue in Notes"
+      },
+      {
+        "id": "2",
+        "label": "Check the evidence before sharing it"
+      }
+    ]
+  },
+  {
+    "id": "money-stolen-cars",
+    "title": "Quick cash: sell stolen cars",
+    "category": "Money",
+    "summary": "Chapter 2: an accessible, repeatable early cash route after unlocking Moses.",
+    "body": "Launch-week walkthroughs report that Moses buys stolen vehicles after his Chapter 2 introduction. Compare vehicle value, travel time, police attention and sale cooldown. Avoid assuming every car is eligible; this is a reported strategy, not a guaranteed payout.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast",
+    "sourceLabel": "PowerPyx — GTA 6 Money Guide",
+    "sources": [
+      {
+        "label": "PowerPyx — GTA 6 Money Guide",
+        "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast"
+      },
+      {
+        "label": "PC Gamer — Fastest ways to make money",
+        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/"
+      },
+      {
+        "label": "GTA Base — Money-making methods",
+        "url": "https://www.gtabase.com/gta-6/articles/how-to-make-money-fast-in-gta-6"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "money",
+      "cars",
+      "chapter-2",
+      "earnings",
+      "starter"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Complete the story mission that introduces Moses"
+      },
+      {
+        "id": "t2",
+        "label": "Find an eligible vehicle without drawing attention"
+      },
+      {
+        "id": "t3",
+        "label": "Deliver it and record your actual payout"
+      },
+      {
+        "id": "t4",
+        "label": "Repeat only if it beats your other options"
+      }
+    ],
+    "stage": "Chapter 2+",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "EARLY-GAME PICK"
+  },
+  {
+    "id": "money-vault-jobs",
+    "title": "High-reward: vault robberies",
+    "category": "Money",
+    "summary": "A late-game candidate for high payouts with significant police risk.",
+    "body": "GTA Base and PowerPyx describe bank vault robberies as a strong later-game earner. Treat payout figures as variable. Prepare escape vehicles and compare profit per minute after heat, ammunition and failure costs.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast",
+    "sourceLabel": "PowerPyx — GTA 6 Money Guide",
+    "sources": [
+      {
+        "label": "PowerPyx — GTA 6 Money Guide",
+        "url": "https://www.powerpyx.com/gta-6-money-guide-how-to-get-money-fast"
+      },
+      {
+        "label": "GTA Base — Money-making methods",
+        "url": "https://www.gtabase.com/gta-6/articles/how-to-make-money-fast-in-gta-6"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "money",
+      "robberies",
+      "late-game",
+      "high-risk"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Unlock vault robbery access"
+      },
+      {
+        "id": "t2",
+        "label": "Prepare escape route and spare vehicle"
+      },
+      {
+        "id": "t3",
+        "label": "Complete a job and record payout"
+      },
+      {
+        "id": "t4",
+        "label": "Compare cash earned per minute"
+      }
+    ],
+    "stage": "Later chapters",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "HIGH-REWARD PICK"
+  },
+  {
+    "id": "money-safe-first-hour",
+    "title": "First-hour cash discipline",
+    "category": "Money",
+    "summary": "Protect the money you earn before investing in expensive vehicles.",
+    "body": "Launch-week advice recommends banking cash rather than keeping large amounts on hand, planning low-risk escapes, and avoiding unnecessary vehicle damage. Your exact financial options depend on story progression; verify them in your save.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi",
+    "sourceLabel": "The Guardian — 15 playing tips",
+    "sources": [
+      {
+        "label": "The Guardian — 15 playing tips",
+        "url": "https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi"
+      },
+      {
+        "label": "GTA Base — Money-making methods",
+        "url": "https://www.gtabase.com/gta-6/articles/how-to-make-money-fast-in-gta-6"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "money",
+      "beginner",
+      "banking",
+      "risk"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Check when your account or payment app becomes available"
+      },
+      {
+        "id": "t2",
+        "label": "Deposit earnings when possible"
+      },
+      {
+        "id": "t3",
+        "label": "Keep a modest reserve for equipment and travel"
+      },
+      {
+        "id": "t4",
+        "label": "Compare earnings before buying a luxury vehicle"
+      }
+    ],
+    "stage": "Early game",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "START HERE"
+  },
+  {
+    "id": "money-quick-robberies",
+    "title": "Opportunistic robberies",
+    "category": "Money",
+    "summary": "Evaluate small robberies and open-world crimes against their heat and time cost.",
+    "body": "Launch-week guides describe shop jobs and incidental open-world criminal opportunities. The recommended strategy is to evaluate a net return: payout minus recovery time, wanted level and equipment costs. Do not treat any listed encounter as a guaranteed spawn.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/",
+    "sourceLabel": "PC Gamer — Fastest ways to make money",
+    "sources": [
+      {
+        "label": "PC Gamer — Fastest ways to make money",
+        "url": "https://www.pcgamer.com/games/grand-theft-auto/gta-6-how-to-make-money/"
+      },
+      {
+        "label": "The Guardian — 15 playing tips",
+        "url": "https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "money",
+      "side-activities",
+      "robberies"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Find a lower-risk opportunity"
+      },
+      {
+        "id": "t2",
+        "label": "Plan an exit without using your personal vehicle"
+      },
+      {
+        "id": "t3",
+        "label": "Record cash received and time elapsed"
+      },
+      {
+        "id": "t4",
+        "label": "Compare against car-selling income"
+      }
+    ],
+    "stage": "Chapter 1+",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": ""
+  },
+  {
+    "id": "story-spoiler-safe-route",
+    "title": "Story route without spoilers",
+    "category": "Story",
+    "summary": "A chapter-by-chapter progress outline with minimal narrative detail.",
+    "body": "Play main missions in order, while checking the map for time-sensitive side content before advancing major story beats. Mission lists can vary depending on whether brief tasks and optional activities are counted. Use the linked walkthrough for actual sequence details, with spoilers revealed only when you choose.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
+    "sourceLabel": "PowerPyx — Full missions walkthrough",
+    "sources": [
+      {
+        "label": "PowerPyx — Full missions walkthrough",
+        "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/"
+      },
+      {
+        "label": "SixTrack — Story walkthrough",
+        "url": "https://sixtrack.app/gta6/walkthrough/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "story",
+      "chapters",
+      "walkthrough",
+      "beginner"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Finish the prologue"
+      },
+      {
+        "id": "t2",
+        "label": "Complete Chapter 1 missions at your pace"
+      },
+      {
+        "id": "t3",
+        "label": "Before changing chapters, check optional content"
+      },
+      {
+        "id": "t4",
+        "label": "Record Chapter 2 completion"
+      },
+      {
+        "id": "t5",
+        "label": "Record Chapters 3–5 completion"
+      }
+    ],
+    "stage": "All chapters",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "SPOILER-SAFE ROUTE"
+  },
+  {
+    "id": "story-before-point-of-no-return",
+    "title": "Before a point of no return",
+    "category": "Story",
+    "summary": "Save, bank money, and check optional activities before story lockouts.",
+    "body": "Player walkthroughs identify certain transition missions that change access to characters, areas or carried resources. Do not assume you can freely replay missions. Consult the linked chapter guide before committing if you want a completionist route.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
+    "sourceLabel": "PowerPyx — Full missions walkthrough",
+    "sources": [
+      {
+        "label": "PowerPyx — Full missions walkthrough",
+        "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/"
+      },
+      {
+        "label": "SixTrack — Story walkthrough",
+        "url": "https://sixtrack.app/gta6/walkthrough/"
+      }
+    ],
+    "spoiler": true,
+    "tags": [
+      "story",
+      "missables",
+      "chapter-1",
+      "warning"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Make a manual save if available"
+      },
+      {
+        "id": "t2",
+        "label": "Check marked side missions and activities"
+      },
+      {
+        "id": "t3",
+        "label": "Bank or safely store valuables as available"
+      },
+      {
+        "id": "t4",
+        "label": "Read the upcoming mission warning in the linked guide"
+      }
+    ],
+    "stage": "Chapter transitions",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": "MISSABLES WARNING"
+  },
+  {
+    "id": "story-chapter-checkpoints",
+    "title": "Five-chapter journey tracker",
+    "category": "Story",
+    "summary": "Track your story completion by chapter without exposing mission titles.",
+    "body": "This is a private checklist organizer for the five reported chapters of the main story. It is intentionally broad; detailed mission breakdowns will be added as individual missions are independently confirmed and sourced.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/",
+    "sourceLabel": "PowerPyx — Full missions walkthrough",
+    "sources": [
+      {
+        "label": "PowerPyx — Full missions walkthrough",
+        "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "story",
+      "progress",
+      "spoiler-free",
+      "tracker"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Chapter 1"
+      },
+      {
+        "id": "t2",
+        "label": "Chapter 2"
+      },
+      {
+        "id": "t3",
+        "label": "Chapter 3"
+      },
+      {
+        "id": "t4",
+        "label": "Chapter 4"
+      },
+      {
+        "id": "t5",
+        "label": "Chapter 5"
+      }
+    ],
+    "stage": "All chapters",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": ""
+  },
+  {
+    "id": "story-side-quests",
+    "title": "Optional activity sweep",
+    "category": "Story",
+    "summary": "Avoid leaving useful side jobs, contacts, or collectibles behind.",
+    "body": "Before advancing a major story beat, use this repeatable checklist to review map markers, active contacts, and unfinished optional quests. The app does not assert that every item is permanently missable.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://sixtrack.app/gta6/walkthrough/",
+    "sourceLabel": "SixTrack — Story walkthrough",
+    "sources": [
+      {
+        "label": "SixTrack — Story walkthrough",
+        "url": "https://sixtrack.app/gta6/walkthrough/"
+      },
+      {
+        "label": "PowerPyx — Full missions walkthrough",
+        "url": "https://www.powerpyx.com/gta-6-full-walkthrough-all-missions/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "story",
+      "side-quests",
+      "completionist"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Check map for optional symbols"
+      },
+      {
+        "id": "t2",
+        "label": "Follow up with contacts"
+      },
+      {
+        "id": "t3",
+        "label": "Review region-specific collectibles"
+      },
+      {
+        "id": "t4",
+        "label": "Record pending activities in personal notes"
+      }
+    ],
+    "stage": "Every chapter",
+    "vehicleClass": "",
+    "confidence": "reported",
+    "recommendation": ""
+  },
+  {
+    "id": "cars-top-speed-watch",
+    "title": "Fast road cars: emerging picks",
+    "category": "Vehicles",
+    "summary": "Performance comparisons are preliminary; prioritize measured handling and speed.",
+    "body": "Launch-week lists disagree on the fastest overall car. Look at candidates such as the Progen Emerus and Pfister Comet S2, but do not infer real top speeds from unverified online estimates. iVice will distinguish in-game stat ratings, tested runs, and anecdotal rankings.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://timesaver.gg/tools/gta-6/cars/fastest",
+    "sourceLabel": "Timesaver — vehicle speed-stat comparison",
+    "sources": [
+      {
+        "label": "Timesaver — vehicle speed-stat comparison",
+        "url": "https://timesaver.gg/tools/gta-6/cars/fastest"
+      },
+      {
+        "label": "GTA Base — Best cars database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "cars",
+      "performance",
+      "supercars",
+      "fastest"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Compare current in-game speed and handling stats"
+      },
+      {
+        "id": "t2",
+        "label": "Try each candidate on the same route"
+      },
+      {
+        "id": "t3",
+        "label": "Record vehicle and tuning state"
+      },
+      {
+        "id": "t4",
+        "label": "Save the car you actually prefer"
+      }
+    ],
+    "stage": "After access",
+    "vehicleClass": "Car",
+    "confidence": "reported",
+    "recommendation": "PERFORMANCE WATCHLIST"
+  },
+  {
+    "id": "cars-practical-getaway",
+    "title": "Best getaway car: by job",
+    "category": "Vehicles",
+    "summary": "A reliable four-door car can beat a faster two-seater for risky missions.",
+    "body": "There is no universal best getaway car. Rank choices by seats, braking, damage tolerance, anonymity, and how easily you can replace them. Use the same escape route for apples-to-apples comparisons.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi",
+    "sourceLabel": "The Guardian — 15 playing tips",
+    "sources": [
+      {
+        "label": "The Guardian — 15 playing tips",
+        "url": "https://www.theguardian.com/games/2026/nov/19/tips-for-playing-grand-theft-auto-vi"
+      },
+      {
+        "label": "GTA Base — Best cars database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "cars",
+      "getaway",
+      "best",
+      "handling"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Choose car with enough seats"
+      },
+      {
+        "id": "t2",
+        "label": "Practice braking and cornering"
+      },
+      {
+        "id": "t3",
+        "label": "Test police-escape route"
+      },
+      {
+        "id": "t4",
+        "label": "Store a backup outside the mission area"
+      }
+    ],
+    "stage": "Any time",
+    "vehicleClass": "Car",
+    "confidence": "reported",
+    "recommendation": "PRACTICAL PICK"
+  },
+  {
+    "id": "vehicles-aircraft",
+    "title": "Planes & helicopters: buyer’s guide",
+    "category": "Vehicles",
+    "summary": "Compare aircraft by access, landing room, flight stability and speed.",
+    "body": "Current public aircraft lists are still being tested. Rather than declare an unverified fastest jet, compare available aircraft for the job: fixed-wing for long routes, helicopter for flexible landings, and utility aircraft for exploration.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.gtabase.com/gta-6/vehicles/best-planes/",
+    "sourceLabel": "GTA Base — Plane comparisons",
+    "sources": [
+      {
+        "label": "GTA Base — Plane comparisons",
+        "url": "https://www.gtabase.com/gta-6/vehicles/best-planes/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "airplanes",
+      "planes",
+      "helicopter",
+      "jets",
+      "aircraft"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Log aircraft you have access to"
+      },
+      {
+        "id": "t2",
+        "label": "Record acquisition location"
+      },
+      {
+        "id": "t3",
+        "label": "Compare takeoff distance and landing options"
+      },
+      {
+        "id": "t4",
+        "label": "Add a personal speed and handling note"
+      }
+    ],
+    "stage": "When unlocked",
+    "vehicleClass": "Aircraft",
+    "confidence": "reported",
+    "recommendation": "AIRCRAFT GUIDE"
+  },
+  {
+    "id": "vehicles-speedboats",
+    "title": "Speedboats: coastal travel picks",
+    "category": "Vehicles",
+    "summary": "Choose watercraft based on coastal runs, handling and passenger needs.",
+    "body": "Boat rankings are still being compiled and published data may differ across sources. Compare fast open-water craft, nimble inflatables and airboats for wetlands. No unsourced top-speed figure is presented as a verified GTA VI measurement.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.gtabase.com/gta-6/vehicles/best-boats/",
+    "sourceLabel": "GTA Base — Boat comparisons",
+    "sources": [
+      {
+        "label": "GTA Base — Boat comparisons",
+        "url": "https://www.gtabase.com/gta-6/vehicles/best-boats/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "boats",
+      "speedboats",
+      "watercraft",
+      "coast"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Identify a fast open-water boat"
+      },
+      {
+        "id": "t2",
+        "label": "Test turning and braking in a narrow channel"
+      },
+      {
+        "id": "t3",
+        "label": "Compare passenger capacity"
+      },
+      {
+        "id": "t4",
+        "label": "Record the best boat for your route"
+      }
+    ],
+    "stage": "When unlocked",
+    "vehicleClass": "Boat",
+    "confidence": "reported",
+    "recommendation": "WATERCRAFT GUIDE"
+  },
+  {
+    "id": "vehicles-offroad",
+    "title": "Off-road and swamp vehicles",
+    "category": "Vehicles",
+    "summary": "Prioritize suspension, terrain control and access in rural Leonida.",
+    "body": "A fast highway car may perform poorly on unpaved trails and wet terrain. Compare practical utility vehicles and specialized water/airboats by the terrain you actually travel.",
+    "region": "General",
+    "sourceType": "community",
+    "sourceUrl": "https://www.gtabase.com/gta-6/vehicles/",
+    "sourceLabel": "GTA Base — Best cars database",
+    "sources": [
+      {
+        "label": "GTA Base — Best cars database",
+        "url": "https://www.gtabase.com/gta-6/vehicles/"
+      },
+      {
+        "label": "GTA Base — Boat comparisons",
+        "url": "https://www.gtabase.com/gta-6/vehicles/best-boats/"
+      }
+    ],
+    "spoiler": false,
+    "tags": [
+      "cars",
+      "offroad",
+      "swamp",
+      "terrain",
+      "vehicles"
+    ],
+    "steps": [
+      {
+        "id": "t1",
+        "label": "Pick a test route in an off-road area"
+      },
+      {
+        "id": "t2",
+        "label": "Try an off-road-oriented vehicle"
+      },
+      {
+        "id": "t3",
+        "label": "Compare traction and stability"
+      },
+      {
+        "id": "t4",
+        "label": "Save vehicle and location in notes"
+      }
+    ],
+    "stage": "Any time",
+    "vehicleClass": "Off-road",
+    "confidence": "reported",
+    "recommendation": ""
+  }
+]

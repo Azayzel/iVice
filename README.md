@@ -1,0 +1,91 @@
+# iVice
+
+**An offline-first GTA VI pocket guide built to sit beside your controller.** Native Expo / React Native / TypeScript for iOS and Android, inspired by the *utility* of Gunther's Library but with an original neon, midnight-purple visual language.
+
+> **Project status:** functional source-code MVP, not an App Store release. The iVice preview and coming-soon website are independently deployable GitHub Pages files. The native app has not yet been validated on physical devices.
+
+[Coming-soon website](https://azayzel.github.io/iVice/) · [Interactive mobile UI preview](https://azayzel.github.io/iVice/preview.html) · [Guide hub](https://azayzel.github.io/iVice/wiki.html) · [PLAN](PLAN.md) · [Decisions](DECISIONS.md) · [Security](SECURITY.md)
+
+## Screen gallery
+
+These are **authored design previews** of the iVice mobile experience, *not* native-device screenshots. The Actions visual-smoke workflow separately captures **real browser screenshots** of the interactive preview as downloadable CI artifacts. Native simulator screenshots are a release requirement.
+
+| Home & quick guides | Money routes | Guide details |
+|---|---|---|
+| ![iVice home design preview](docs/screenshots/home-preview.svg) | ![Money guide category design preview](docs/screenshots/money-preview.svg) | ![Money guide detail design preview](docs/screenshots/guide-preview.svg) |
+
+## What the guide does
+
+- **Make money:** source-linked route recommendations: early car sales after the Moses introduction, managing pocket cash, robberies, and later vault jobs. Each includes unlock stage, prerequisites, risks and per-profile checklists.
+- **Story:** five-chapter tracker, optional-mission sweeps and chapter-transition alerts, with spoilers hidden by default.
+- **Best vehicles:** comparisons for cars and getaways, airplanes/helicopters, speedboats and off-road vehicles. Rankings distinguish demonstrated in-game facts from launch-week reporting; no fabricated top speeds.
+- **Wikipedia-style library:** character and region references with links to original sources (including Brian Heder on Rockstar and Fandom), search, categories and bookmarks.
+- **Collectibles & discoveries:** private checklists, notes, completion counts and multiple playthroughs; no sign-in or internet connection is needed to use the bundled material.
+- **ViceFiles integration:** opt-in manual sync of *moderator-approved* guide entries via a read-only API contract. It never posts user notes to the server.
+
+### What counts as a recommendation?
+
+`official` denotes a summary based on Rockstar's public material. `community`/`reported` means iVice links to independently published walkthroughs or launch-week research, but has *not* personally measured the result. `template` is a user checklist, **not a game fact**. All articles have original descriptions and link to third-party material rather than copying it. Content status can be corrected as better evidence arrives.
+
+## Quick start
+
+Requirements: Node 22.13+, npm, iOS simulator on macOS or Android emulator/compatible Expo Go (Expo SDK 58).
+
+```bash
+npm install
+npm run test
+npm run typecheck
+npm start
+```
+
+The app opens locally with a bundled catalog and an on-device SQLite database. Check `npx expo install --check` if dependency ranges change. No server or account is required for its base functionality.
+
+### Development website preview
+
+The docs folder is a standalone static site; you can open `docs/index.html` or serve the directory:
+
+```bash
+python -m http.server 8080 --directory docs
+# http://localhost:8080
+```
+
+`docs/preview.html` is a small **interactive browser demo** featuring the same guide categories, clickable article details, source links and checklist behavior. It uses browser localStorage for sample checkboxes rather than the native app's SQLite implementation. The browser demo and the Expo app are distinct front ends using the same curated content model.
+
+## Tests & screenshots
+
+```bash
+npm run test                 # Content schema, provenance, category and ID checks
+npm run typecheck            # TypeScript (requires npm install)
+python -m pip install playwright pillow
+python -m playwright install chromium
+python scripts/visual_snapshots.py       # Visual UI smoke checks + real browser screenshots
+python scripts/visual_snapshots.py --verify  # Compare against previously generated baselines
+```
+
+The last command writes four PNG snapshots (mobile home, mobile money catalog, mobile money guide, desktop landing) to `docs/screenshots/`. `--verify` compares the pixels against those files, allowing a small cross-platform antialiasing tolerance. On CI, the workflow uploads **browser-snapshot-artifacts** for each run; see GitHub Actions. To update a browser baseline intentionally, run the script without `--verify` and review the image diff before committing.
+
+The local browser in the authoring environment has administrator navigation blocking, so those browser capture checks could not be run here. **Do not confuse the SVG previews above with screenshots captured from the running Expo app.**
+
+## GitHub Pages and guide hub
+
+`docs/index.html` is the responsive prelaunch landing page, `docs/preview.html` is the interactive app preview, and `docs/wiki.html` is the coming-soon guide hub. A Pages deployment workflow is provided in `.github/workflows/pages.yml`.
+
+**One-time repository setting:** Go to **Settings → Pages → Build and deployment → Source: GitHub Actions** (if not already selected). The workflow deploys `docs/` on pushes to `main`. Until Pages is enabled and the deployment succeeds, the links above may not resolve.
+
+GitHub's separately hosted repository **Wiki** is not the same as GitHub Pages. This starter supplies a branded coming-soon *guide hub* at `/wiki.html`; editing the actual `Azayzel/iVice/wiki` Git repository is a separate step and has not been performed.
+
+## Optional guide sync
+
+Set `EXPO_PUBLIC_API_URL=https://your-api.example` in a local `.env`; no keys are required. In Settings, tap **Sync curated guides**. The app requests `GET /api/guides` and validates the payload before replacing a remote-only snapshot. This is a **client contract only**; the ViceFiles backend needs the matching read-only endpoint. Only moderator-approved content should be published; don't turn unreviewed Reddit scrape results into verified recommendations.
+
+Expected payload:
+
+```json
+{"entries":[{"id":"vf-guide-example","title":"Example","category":"Money","summary":"Original curated summary","body":"Original explanation and evidence","region":"Vice City","sourceType":"community","sourceUrl":"https://example.com/evidence","sourceLabel":"Evidence","spoiler":false,"tags":["money"],"steps":[{"id":"review","label":"Review the evidence"}],"sources":[{"label":"Evidence","url":"https://example.com/evidence"}],"confidence":"reported","stage":"Chapter 2+"}]}
+```
+
+## Editorial and licensing
+
+iVice is an **unofficial fan-made companion**, not affiliated with Rockstar Games, Take-Two, or Fandom. No copyrighted artwork, map screenshots, gameplay videos, or Fandom article text are bundled. Before publishing on app stores, assess trademark, third-party content licenses, terms for use, privacy policy and moderation obligations.
+
+This is an open-source starter; choose a LICENSE before accepting outside contributions. See [TODO](TODO.md) for the planned map, cloud sync, verified player-submitted guides, native snapshots and platform QA.

@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "iVice",
+    "slug": "ivice",
+    "scheme": "ivice",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "io.ivice.guide"
+    },
+    "android": {
+      "package": "io.ivice.guide",
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-sqlite"
+    ],
+    "extra": {
+      "projectName": "iVice",
+      "disclaimer": "Unofficial GTA VI companion"
+    }
+  }
+}

@@ -11,7 +11,8 @@ import { syncCatalog } from './src/sync';
 
 import { REGIONS, DEFAULT_SESSION, canRead, chapterLabel, accessLabel, recommend } from './src/recommendations';
 import { THEMES, parseTheme, type Palette } from './src/themes';
-import { getChapterRoadmap } from './src/chapters';
+import { getChapterRoadmap, getStoryJob, getStoryJobs, getStoryLinks, type StoryCharacter, type StoryJob } from './src/chapters';
+import { readStoryPosition, writeStoryPosition } from './src/db';
 import { getSubject, libraryTitle, searchLibrary, relatedLibraryEntries, LOCAL_MEDIA_GUIDES, HOME_LANDSCAPES, type LibraryMode } from './src/library';
 import { LIBRARY_MEDIA } from './src/library-media.generated';
 import { COMMUNITY_MEDIA } from './src/community-media';
@@ -79,37 +80,67 @@ function HomeLandscapes({ entries, onOpen }: { entries: GuideEntry[]; onOpen: (e
     </View>;
 }
 
-function ChapterRoadmap({ chapter, onSelectChapter, onOpenSource, busy }: { chapter: Chapter; onSelectChapter: (chapter: Chapter) => void; onOpenSource: (url: string) => void; busy: boolean }) {
+function StoryPortrait({ character, hidden = false }: { character: StoryCharacter; hidden?: boolean }) {
+    const { C, s } = useAppearance();
+    const [failed, setFailed] = useState(false);
+    const people = character === 'Both' ? ['Jason', 'Lucia'] : character === 'Unknown' ? [] : [character];
+    return <View accessible accessibilityLabel={hidden ? 'Hidden character' : character === 'Unknown' ? 'Playable character unverified' : character === 'Both' ? 'Jason and Lucia' : character} style={[s.storyPortraits, { width: people.length === 2 && !hidden ? 76 : 44 }]}>
+        {!hidden && people.length && !failed ? people.map((person, index) => <View key={person} style={[s.storyPortrait, { left: index * 32, borderColor: person === 'Jason' ? C.aqua : C.pink, overflow: 'hidden' }]}><Image source={LIBRARY_MEDIA[person === 'Jason' ? 'jason-duval' : 'lucia-caminos'][0].source} resizeMode="cover" onError={() => setFailed(true)} style={person === 'Jason' ? { position: 'absolute', width: 198, height: 112, left: -110, top: 0 } : { position: 'absolute', width: 132, height: 75, left: -66, top: -7 }} /></View>) : <View style={[s.storyPortrait, { justifyContent: 'center', alignItems: 'center' }]}><Ionicons name={hidden ? 'lock-closed-outline' : 'person-outline'} size={21} color={C.muted} /></View>}
+    </View>;
+}
+
+function StoryJobRow({ job, current, onPress }: { job: StoryJob; current: boolean; onPress: () => void }) {
+    const { C, s } = useAppearance();
+    return <Pressable accessibilityRole="button" accessibilityLabel={`${job.title}, Chapter ${job.chapter}${current ? ', current job' : ''}`} onPress={onPress} style={s.storyJobRow}>
+        <StoryPortrait character={job.character} />
+        <View style={{ flex: 1, gap: 4 }}><Text style={s.entryTitle}>{job.title}</Text><Text style={s.entryMeta}>{current ? 'Current job' : `Chapter ${job.chapter} / ${job.kind}`}</Text></View>
+        <Ionicons name={current ? 'locate' : 'chevron-forward'} size={18} color={current ? C.pink : C.muted} />
+    </Pressable>;
+}
+
+function ChapterRoadmap({ chapter, region, currentId, onSelectChapter, onCurrentJob, onOpenSource, busy }: { chapter: Chapter; region: string; currentId: string | null; onSelectChapter: (chapter: Chapter) => void; onCurrentJob: (job: StoryJob | null) => void; onOpenSource: (url: string) => void; busy: boolean }) {
     const { C, s } = useAppearance();
     const [reveal, setReveal] = useState(false);
-    const roadmap = getChapterRoadmap(chapter, reveal);
-    return <Scroll>
-        <Text style={s.screenTitle}>Story</Text>
-        <Text style={s.smallLabel}>Your chapter</Text>
-        <View style={s.wrapRow}>{([0, 1, 2, 3, 4, 5] as Chapter[]).map(value => <Pressable key={value} accessibilityRole="button" accessibilityLabel={value === 0 ? 'Chapter not set' : `Set Chapter ${value}`} accessibilityState={{ selected: chapter === value, disabled: busy }} disabled={busy} onPress={() => onSelectChapter(value)} style={[s.chip, chapter === value && s.chipActive]}><Text style={[s.chipText, chapter === value && s.chipTextActive]}>{value === 0 ? 'Not set' : String(value)}</Text></Pressable>)}</View>
-        {roadmap ? <>
-            <SectionHeading title={roadmap.nextChapter ? `Chapter ${chapter} to ${roadmap.nextChapter}` : 'Final chapter'} />
-            <Text style={s.entryMeta}>Source-linked, not independently play-tested</Text>
-            <SectionHeading title="Required for progression" />
-            <Text style={s.detailText}>{roadmap.requirement}</Text>
-            <View style={s.settingRow}><Text style={[s.settingTitle, { flex: 1 }]}>Reveal mission names</Text><Switch accessibilityLabel="Reveal chapter mission names" value={reveal} onValueChange={setReveal} trackColor={{ true: C.pink, false: C.border }} thumbColor={C.text} /></View>
-            {roadmap.details ? <>
-                <SectionHeading title={roadmap.nextChapter ? 'When the next chapter starts' : 'End of the story'} />
-                <Text style={s.detailText}>{roadmap.details.trigger}</Text>
-                {roadmap.details.milestones.length ? <>
-                    <SectionHeading title="Required milestones" />
-                    {roadmap.details.milestones.map((milestone, index) => <View key={milestone} style={{ flexDirection: 'row', gap: 12 }}><Text style={{ color: C.aqua, fontSize: 16, width: 24 }}>{index + 1}.</Text><Text style={[s.detailText, { flex: 1 }]}>{milestone}</Text></View>)}
-                </> : null}
-                <SectionHeading title="Optional, not a chapter gate" />
-                <Text style={s.detailText}>{roadmap.details.optional}</Text>
-                <Pressable accessibilityRole="link" onPress={() => onOpenSource(roadmap.details!.sourceUrl)} style={s.sourceRow}><Ionicons name="open-outline" size={18} color={C.aqua} /><Text style={{ color: C.aqua, flex: 1 }}>Transition source</Text></Pressable>
-            </> : null}
-            <SectionHeading title="Before moving on" />
-            <Text style={s.detailText}>{roadmap.warning}</Text>
-            <Text style={s.secondary}>Remaining missions and time: unknown. iVice is not connected to your game save. Mission order can vary.</Text>
-            <Pressable accessibilityRole="link" onPress={() => onOpenSource(roadmap.overviewUrl)} style={s.sourceRow}><Ionicons name="open-outline" size={18} color={C.aqua} /><Text style={{ color: C.aqua, flex: 1 }}>{roadmap.sourceLabel}</Text></Pressable>
-            <Text style={s.secondary}>Sources reviewed {roadmap.reviewedOn}. Optional examples are not an exhaustive missables guide.</Text>
-        </> : <Text style={s.secondary}>No chapter selected.</Text>}
+    const [viewChapter, setViewChapter] = useState<Chapter>(chapter || 1);
+    const [mode, setMode] = useState<'Route' | 'Chapter'>('Route');
+    const [selectedId, setSelectedId] = useState<string | null>(currentId);
+    const [history, setHistory] = useState<string[]>([]);
+    const [notesOpen, setNotesOpen] = useState(false);
+    const roadmap = getChapterRoadmap(viewChapter, reveal)!;
+    const jobs = getStoryJobs(viewChapter, reveal);
+    const current = getStoryJob(currentId, reveal);
+    const active = jobs.find(job => job.id === selectedId) ?? jobs.find(job => job.id === currentId) ?? jobs.find(job => job.kind === 'Transition') ?? jobs[0];
+    const links = getStoryLinks(active?.id ?? '', reveal);
+    function inspect(job: StoryJob) {
+        if (active && active.id !== job.id) setHistory(previous => [...previous, active.id]);
+        setViewChapter(job.chapter); setSelectedId(job.id); setMode('Route');
+    }
+    function browseChapter(value: Chapter) { setViewChapter(value); setSelectedId(null); setHistory([]) }
+    return <Scroll compact>
+        <View style={s.inline}><Text style={[s.screenTitle, { flex: 1 }]}>Story</Text><Text style={s.landscapeLabel}>Chapter {viewChapter}</Text><LocationTool label={viewChapter === chapter ? 'Clear current chapter' : 'Set as current chapter'} icon={viewChapter === chapter ? 'close-outline' : 'locate-outline'} onPress={() => { if (!busy) onSelectChapter(viewChapter === chapter ? 0 : viewChapter) }} /></View>
+        <View style={s.storyChapterRail}><View pointerEvents="none" style={s.storyChapterLine} />{([1, 2, 3, 4, 5] as Chapter[]).map(value => <Pressable key={value} accessibilityRole="tab" accessibilityLabel={`Browse Chapter ${value}${chapter === value ? ', your current chapter' : ''}`} accessibilityState={{ selected: viewChapter === value }} onPress={() => browseChapter(value)} style={s.storyChapterStop}><View style={[s.storyChapterDot, viewChapter === value && { borderColor: C.pink, backgroundColor: C.panel2 }]}><Text style={[s.storyChapterNumber, viewChapter === value && { color: C.pink }]}>{value}</Text></View><Text style={[s.entryMeta, { minHeight: 18 }]}>{chapter === value ? 'Current' : ' '}</Text></Pressable>)}</View>
+        {currentId ? <View style={s.storyPosition}><Ionicons name="locate-outline" size={20} color={C.pink} /><View style={{ flex: 1, gap: 3 }}><Text style={s.smallLabel}>Your current job</Text><Text style={s.secondary}>{current?.title ?? 'Current job hidden'}</Text></View>{current ? <LocationTool label="Go to current job" icon="return-up-back-outline" onPress={() => inspect(current)} /> : null}</View> : <Text style={s.entryMeta}>{chapter ? 'Current job not set' : 'Progress not set'}{region ? ` / ${region}` : ''}</Text>}
+        <View style={s.mapSummary}><View accessibilityRole="tablist" style={{ flex: 1, flexDirection: 'row', gap: 24 }}>{(['Route', 'Chapter'] as const).map(value => <Pressable key={value} accessibilityRole="tab" accessibilityState={{ selected: mode === value }} onPress={() => setMode(value)} style={[s.mapCategory, mode === value && { borderBottomColor: C.pink }]}><Text style={[s.mapCategoryText, mode === value && { color: C.text }]}>{value}</Text></Pressable>)}</View><Text style={s.smallLabel}>Spoilers</Text><Switch accessibilityLabel="Reveal story jobs, characters and locations" value={reveal} onValueChange={setReveal} trackColor={{ true: C.pink, false: C.border }} thumbColor={C.text} /></View>
+        {!reveal ? <View style={s.storyHidden}>{['Prerequisites', 'Mission hidden', 'Follow-on jobs'].map((label, index) => <View key={label}><View style={s.storyJobRow}><StoryPortrait character="Unknown" hidden /><View style={{ gap: 5, flex: 1 }}><Text style={s.landscapeLabel}>{label}</Text><Text style={s.entryMeta}>Spoiler protected</Text></View></View>{index < 2 ? <View style={s.storyConnector}><Ionicons name="arrow-down" size={18} color={C.border} /></View> : null}</View>)}</View> : mode === 'Chapter' ? <>
+            <Text style={s.entryMeta}>Reported jobs / partial chapter coverage</Text>
+            <View>{jobs.filter(job => job.kind !== 'Optional').map(job => <StoryJobRow key={job.id} job={job} current={job.id === currentId} onPress={() => inspect(job)} />)}</View>
+            {jobs.some(job => job.kind === 'Optional') ? <View style={s.storyOptional}><View style={s.inline}><Ionicons name="git-branch-outline" size={19} color={C.yellow} /><Text style={s.landscapeLabel}>Optional / not chapter gates</Text></View>{jobs.filter(job => job.kind === 'Optional').map(job => <StoryJobRow key={job.id} job={job} current={job.id === currentId} onPress={() => inspect(job)} />)}</View> : null}
+        </> : active ? <View style={{ gap: 8 }}>
+            <View style={s.mapSummary}><Text style={[s.smallLabel, { flex: 1 }]}>Reported prerequisites</Text>{history.length ? <LocationTool label="Previous inspected job" icon="arrow-back" onPress={() => { const previous = getStoryJob(history.at(-1) ?? null, reveal); if (previous) { setSelectedId(previous.id); setViewChapter(previous.chapter) } setHistory(items => items.slice(0, -1)) }} /> : null}</View>
+            {links.prerequisites.length ? <View>{links.prerequisites.map(job => <StoryJobRow key={job.id} job={job} current={job.id === currentId} onPress={() => inspect(job)} />)}<View style={s.storyConnector}><Ionicons name="arrow-down" size={21} color={C.aqua} /></View></View> : <Text style={s.entryMeta}>No prerequisites documented here</Text>}
+            <View style={[s.storyFocus, active.id === currentId && { borderLeftColor: C.pink }]}>
+                <View style={s.inline}><StoryPortrait character={active.character} /><View style={{ flex: 1, gap: 4 }}><Text style={[s.smallLabel, { color: active.id === currentId ? C.pink : C.aqua }]}>{active.id === currentId ? 'Current job' : active.kind}</Text><Text style={s.storyFocusTitle}>{active.title}</Text></View></View>
+                <View style={s.inline}><Ionicons name="location-outline" size={18} color={C.aqua} /><Text style={[s.secondary, { flex: 1 }]}>{active.location || 'Start location unverified'}</Text></View>
+                <Text style={s.entryMeta}>{active.character === 'Unknown' ? 'Playable character unverified' : `Playable / ${active.character === 'Both' ? 'Jason + Lucia' : active.character} / reported`}</Text>
+                <Pressable accessibilityRole="button" disabled={busy} onPress={() => onCurrentJob(active.id === currentId ? null : active)} style={s.storyCommand}><Ionicons name={active.id === currentId ? 'close-circle-outline' : 'locate-outline'} size={20} color={C.pink} /><Text style={{ color: C.pink, fontSize: 15 }}>{active.id === currentId ? 'Clear current job' : 'Set as current job'}</Text></Pressable>
+            </View>
+            {links.dependents.length ? <View><View style={s.storyConnector}><Ionicons name="arrow-down" size={21} color={C.aqua} /></View><Text style={s.smallLabel}>Leads to</Text>{links.dependents.map(job => <StoryJobRow key={job.id} job={job} current={job.id === currentId} onPress={() => inspect(job)} />)}</View> : <Text style={s.entryMeta}>{active.kind === 'Optional' ? 'Not a reported chapter prerequisite' : 'Follow-on jobs not documented here'}</Text>}
+            {active.conditions ? <View style={{ gap: 6, paddingTop: 12 }}><Text style={s.smallLabel}>Conditions & notes</Text><Text style={s.secondary}>{active.conditions}</Text></View> : null}
+        </View> : null}
+        <Pressable accessibilityRole="button" accessibilityState={{ expanded: notesOpen }} onPress={() => setNotesOpen(value => !value)} style={s.sourceRow}><Ionicons name="information-circle-outline" size={20} color={C.muted} /><Text style={[s.secondary, { flex: 1 }]}>Chapter notes</Text><Ionicons name={notesOpen ? 'chevron-up' : 'chevron-down'} size={18} color={C.muted} /></Pressable>
+        {notesOpen ? <View style={{ gap: 12 }}><Text style={s.smallLabel}>Required for progression</Text><Text style={s.secondary}>{roadmap.requirement}</Text>{roadmap.details ? <><Text style={s.smallLabel}>Chapter transition</Text><Text style={s.secondary}>{roadmap.details.trigger}</Text><Text style={s.smallLabel}>Optional / separate from progression</Text><Text style={s.secondary}>{roadmap.details.optional}</Text></> : null}<Text style={s.smallLabel}>Before moving on</Text><Text style={s.secondary}>{roadmap.warning}</Text></View> : null}
+        <Text style={s.entryMeta}>Partial, source-reported route. Position is manually set, not synced with your game. Links are not a complete unlock checklist.</Text>
+        <Pressable accessibilityRole="link" onPress={() => onOpenSource((mode === 'Route' ? active?.sourceUrl : null) ?? roadmap.details?.sourceUrl ?? roadmap.overviewUrl)} style={s.sourceRow}><Ionicons name="open-outline" size={17} color={C.aqua} /><Text style={{ color: C.aqua, flex: 1 }}>PowerPyx source</Text><Text style={s.entryMeta}>{roadmap.reviewedOn}</Text></Pressable>
     </Scroll>;
 }
 
@@ -180,6 +211,7 @@ function IViceApp() {
     const [db, setDb] = useState<SQLiteDatabase | null>(null), [loading, setLoading] = useState(true), [error, setError] = useState('');
     const [tab, setTab] = useState<Tab>('Home'), [guides, setGuides] = useState<GuideEntry[]>([]), [profiles, setProfiles] = useState<Profile[]>([]), [activeProfile, setActiveProfile] = useState('my-first-playthrough');
     const [favorites, setFavorites] = useState<Set<string>>(new Set());
+    const [storyPosition, setStoryPosition] = useState<string | null>(null);
     const [spoilers, setSpoilers] = useState(false), [query, setQuery] = useState(''), [category, setCategory] = useState<Category | 'All'>('All');
     const [selected, setSelected] = useState<GuideEntry | null>(null);
     const [detailHistory, setDetailHistory] = useState<GuideEntry[]>([]);
@@ -190,8 +222,8 @@ function IViceApp() {
     const [profileName, setProfileName] = useState(''), [syncing, setSyncing] = useState(false), [syncStatus, setSyncStatus] = useState('Offline catalog ready');
     const exclusive = async (action: () => Promise<void>) => { if (lock.current) return; lock.current = true; setBusy(true); try { await action() } catch { Alert.alert('Could not complete that action', 'Your saved data is retained. Please retry.') } finally { lock.current = false; setBusy(false) } };
     const refresh = useCallback(async (database: SQLiteDatabase, profileId: string) => {
-        const [all, prof, favs, play] = await Promise.all([readGuides(database), readProfiles(database), readFavorites(database, profileId), readSession(database, profileId)]);
-        setGuides([...all.filter(entry => entry.sourceType !== 'template'), ...LOCAL_MEDIA_GUIDES]); setProfiles(prof); setFavorites(favs); setSession(play);
+        const [all, prof, favs, play, position] = await Promise.all([readGuides(database), readProfiles(database), readFavorites(database, profileId), readSession(database, profileId), readStoryPosition(database, profileId)]);
+        setGuides([...all.filter(entry => entry.sourceType !== 'template'), ...LOCAL_MEDIA_GUIDES]); setProfiles(prof); setFavorites(favs); setSession(play); setStoryPosition(getStoryJob(position, true)?.chapter === play.chapter ? position : null);
     }, []);
     useEffect(() => {
         let active = true; let database: SQLiteDatabase | null = null; (async () => {
@@ -202,7 +234,8 @@ function IViceApp() {
     useEffect(() => { setPageSize(30) }, [query, category, libraryMode, vehicleFilter, savedOnly, spoilers, activeProfile]);
     const activeName = profiles.find(x => x.id === activeProfile)?.name ?? 'My playthrough';
     const picks = useMemo(() => recommend(guides, session, REFERENCE_PROGRESS, spoilers), [guides, session, spoilers]);
-    async function updateSession(next: PlaySession) { if (!db) return; await exclusive(async () => { await writeSession(db, activeProfile, next); setSession(next); if (selected && !canRead(selected, next, spoilers)) setSelected(null) }) }
+    async function updateSession(next: PlaySession) { if (!db) return; await exclusive(async () => { if (next.chapter !== session.chapter) { await writeStoryPosition(db, activeProfile, null, next); setStoryPosition(null) } else await writeSession(db, activeProfile, next); setSession(next); if (selected && !canRead(selected, next, spoilers)) setSelected(null) }) }
+    async function updateStoryPosition(job: StoryJob | null) { if (!db) return; await exclusive(async () => { const next = { ...session, chapter: job?.chapter ?? session.chapter }; await writeStoryPosition(db, activeProfile, job?.id ?? null, next); setSession(next); setStoryPosition(job?.id ?? null); if (selected && !canRead(selected, next, spoilers)) setSelected(null) }) }
     async function changeTheme(next: ThemeName) { if (!db) return; await exclusive(async () => { await writeSetting(db, 'appearance', next); setTheme(next) }) }
     function openItem(item: GuideEntry, related = false) { if (!db || lock.current || !canRead(item, session, spoilers)) return; setDetailHistory(history => related && selected ? [...history, selected] : []); setSelected(item); void updateSession({ ...session, lastGuideId: item.id }) }
     function closeDetail() { setSelected(null); setDetailHistory([]) }
@@ -298,7 +331,7 @@ function IViceApp() {
                     <Pressable onPress={doSync} disabled={busy || syncing} style={s.outlineButton}>{syncing ? <ActivityIndicator color={C.aqua} /> : <Ionicons name="cloud-download-outline" color={C.aqua} size={17} />}<Text style={s.outlineButtonText}>Sync curated guides</Text></Pressable>
                     <Text style={s.disclaimer}>iVice v0.1 · Local-first{'\n'}Unofficial. Not affiliated with Rockstar Games or Take-Two Interactive.</Text>
                 </Scroll>}
-                {tab === 'Story' && <ChapterRoadmap key={`${activeProfile}:${session.chapter}`} chapter={session.chapter} busy={busy} onSelectChapter={chapter => void updateSession({ ...session, chapter })} onOpenSource={url => void openUrl(url)} />}
+                {tab === 'Story' && <ChapterRoadmap key={activeProfile} chapter={session.chapter} region={session.region} currentId={storyPosition} busy={busy} onSelectChapter={chapter => void updateSession({ ...session, chapter })} onCurrentJob={job => void updateStoryPosition(job)} onOpenSource={url => void openUrl(url)} />}
             </>}
         </ScreenTransition>
         {busy ? <Text accessibilityLiveRegion="polite" style={{ color: C.aqua, textAlign: 'center', fontSize: 12, padding: 4 }}>Saving or updating guide…</Text> : null}<SafeAreaView edges={['bottom']} style={{ backgroundColor: C.panel }}><View style={s.nav}>{TABS.map(t => <Pressable key={t} disabled={busy} onPress={() => { if (t === 'Library') { browse('All') } else { setTab(t) } closeDetail() }} accessibilityRole="tab" accessibilityState={{ selected: tab === t }} style={s.navItem}><Ionicons name={ICONS[t]} color={tab === t ? C.pink : C.muted} size={22} /><Text style={[s.navLabel, tab === t && { color: C.pink }]}>{t}</Text><View style={[s.navDot, { opacity: tab === t ? 1 : 0 }]} /></Pressable>)}</View></SafeAreaView>
@@ -618,6 +651,21 @@ const createStyles = (C: Palette, fontsReady: boolean) => {
         entryImage: { width: 88, height: 66, borderRadius: 6, backgroundColor: C.panel, alignSelf: 'flex-start' },
         segmented: { flexDirection: 'row', backgroundColor: C.panel, borderRadius: 8, padding: 4 },
         mapTool: { width: 44, height: 44, justifyContent: 'center', alignItems: 'center' },
+        storyPortraits: { height: 44, flexShrink: 0 },
+        storyPortrait: { position: 'absolute', width: 44, height: 44, borderRadius: 22, borderWidth: 2, borderColor: C.border, backgroundColor: C.panel2 },
+        storyChapterRail: { flexDirection: 'row', position: 'relative', paddingVertical: 8 },
+        storyChapterLine: { position: 'absolute', height: 1, backgroundColor: C.border, top: 26, left: '10%', right: '10%' },
+        storyChapterStop: { flex: 1, alignItems: 'center', gap: 5, minHeight: 60 },
+        storyChapterDot: { width: 36, height: 36, borderRadius: 18, borderWidth: 1, borderColor: C.border, backgroundColor: C.bg, alignItems: 'center', justifyContent: 'center' },
+        storyChapterNumber: { color: C.muted, fontSize: 16, fontFamily: medium },
+        storyPosition: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingVertical: 12, borderTopWidth: 1, borderBottomWidth: 1, borderColor: C.border },
+        storyJobRow: { flexDirection: 'row', alignItems: 'center', gap: 12, minHeight: 68, paddingVertical: 10, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: C.border },
+        storyHidden: { paddingVertical: 10 },
+        storyConnector: { minHeight: 28, marginLeft: 12, width: 20, alignItems: 'center', justifyContent: 'center' },
+        storyFocus: { borderLeftWidth: 3, borderLeftColor: C.aqua, paddingLeft: 14, paddingVertical: 12, gap: 12 },
+        storyFocusTitle: { fontFamily: medium, fontSize: 20, color: C.text },
+        storyCommand: { minHeight: 44, flexDirection: 'row', alignItems: 'center', gap: 8, flexShrink: 1 },
+        storyOptional: { borderLeftWidth: 1, borderStyle: 'dashed', borderColor: C.yellow, paddingLeft: 14, gap: 8, marginTop: 12 },
         mapToolFace: { width: 34, height: 34, borderRadius: 6, justifyContent: 'center', alignItems: 'center' },
         mapTooltip: { position: 'absolute', right: 0, top: 43, width: 132, padding: 8, borderRadius: 4, backgroundColor: C.panel2, borderWidth: 1, borderColor: C.border },
         mapViewTools: { flexDirection: 'row', alignItems: 'center' },

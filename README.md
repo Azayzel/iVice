@@ -19,7 +19,7 @@ These are **historical screenshots captured by Playwright in GitHub Actions** fr
 ## What the guide does
 
 - **Make money:** source-linked route references with reported unlock stages, prerequisites and risks.
-- **Story:** chapter roadmaps separate transition triggers and required milestones from optional tasks. Mission names require a separate reveal; the app does not read your save or estimate remaining time.
+- **Story:** a portrait-based route links reported prerequisites and follow-on jobs, with a separate chapter list for required and optional work. A manually selected current job persists per playthrough without completing other missions. Names, locations and character assignments require a separate spoiler reveal; the app does not read your game save.
 - **Best vehicles:** comparisons for cars and getaways, airplanes/helicopters, speedboats and off-road vehicles. Rankings distinguish demonstrated in-game facts from launch-week reporting; no fabricated top speeds.
 - **Wikipedia-style library:** character and region references with links to original sources (including Brian Heder on Rockstar and Fandom), search, categories and bookmarks.
 - **Discoveries:** source-linked references and per-playthrough bookmarks; no sign-in or internet connection is needed to read bundled material.
@@ -38,6 +38,8 @@ Navigation is **Home, Library, Story, Settings**. Notes, Track, guide checkboxes
 Native navigation uses short fade/slide transitions and spring press feedback through React Native Animated, without a web motion dependency. The system Reduce Motion setting disables these effects and the guide modal's slide. The tab bar owns the bottom safe-area background while keeping buttons above the home indicator. Physical-device checks should include rapid tab switches, press cancellation while scrolling, and toggling Reduce Motion while the app is open.
 
 Chapter roadmaps in [src/chapters.ts](src/chapters.ts) summarize PowerPyx's mission index and individual transition walkthroughs, reviewed November 25, 2026. These are reported findings, not official Rockstar rules or independently play-tested results. Optional examples are not an exhaustive missables guide. Chapter 5 is treated as the final chapter, not as a transition to a fabricated Chapter 6.
+
+The Story route currently covers 22 selected jobs, not the complete mission list. Chapter browsing does not change saved progress; setting a current job updates its chapter atomically. Unknown locations and playable characters stay explicitly unverified. Portraits use the existing bundled Jason/Lucia images, with paired portraits for sourced shared missions. Named links are partial prerequisites, not a complete unlock checklist; conditions and chapter notes retain the remaining requirements. Coffee Break and the money gate are independent prerequisites for Checking Out, not an invented sequential chain. Its source also inconsistently calls the motel Scarlet and Starlet, so that discrepancy is retained in the notes.
 
 Library now separates an **Encyclopedia** of named subjects from general **Guides**, with an **All** search. Names and aliases rank ahead of body-text matches. People, locations, vehicles and weapons can be opened from Home or filtered in Library. Subject pages show images, known details, location/acquisition gaps, sources and related entries with back navigation. Search results, counts and related links respect the existing chapter and spoiler rules. No stats, prices, spawn conditions or unlock requirements are inferred from images.
 

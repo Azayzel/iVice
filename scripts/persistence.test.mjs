@@ -115,6 +115,61 @@ test('library indexes named subjects, ranks names first and keeps guides separat
     for (const subject of mediaManifest) assert.ok(combined.some(entry => entry.id === subject.id), `Orphaned media: ${subject.id}`);
     assert.equal(new Set(combined.map(entry => entry.id)).size, combined.length);
 });
+test('story graph hides spoilers and connects only reported prerequisites', () => {
+    const jobs = [1, 2, 3, 4, 5].flatMap(chapter => chapters.getStoryJobs(chapter, true));
+    assert.equal(new Set(jobs.map(job => job.id)).size, jobs.length);
+    for (const job of jobs) {
+        assert.deepEqual(chapters.getStoryJobs(job.chapter), []);
+        assert.equal(chapters.getStoryJob(job.id), null);
+        assert.deepEqual(chapters.getStoryLinks(job.id), { prerequisites: [], dependents: [] });
+        const links = chapters.getStoryLinks(job.id, true);
+        assert.deepEqual(links.prerequisites.map(item => item.id).sort(), [...job.requires].sort());
+        for (const required of links.prerequisites) {
+            assert.notEqual(required.kind, 'Optional');
+            assert.ok(required.chapter <= job.chapter);
+            assert.ok(chapters.getStoryLinks(required.id, true).dependents.some(next => next.id === job.id));
+        }
+        if (job.kind === 'Optional') assert.deepEqual(links.dependents, []);
+        assert.ok(['Jason', 'Lucia', 'Both', 'Unknown'].includes(job.character));
+    }
+    assert.equal(chapters.getStoryJob('ocean-beach', true).location, null);
+    assert.equal(chapters.getStoryJob('missing', true), null);
+    assert.equal(chapters.getStoryJob('home-sweet-home', true).character, 'Lucia');
+    assert.equal(chapters.getStoryJob('discharge-time', true).character, 'Both');
+    assert.deepEqual(chapters.getStoryLinks('prepare-vice-city', true).prerequisites, []);
+    assert.deepEqual(chapters.getStoryLinks('checking-out', true).prerequisites.map(job => job.id), ['coffee-break', 'prepare-vice-city']);
+    assert.match(chapters.getStoryJob('prepare-vice-city', true).conditions, /\$15,000/);
+    const visit = (id, path = []) => {
+        assert.ok(!path.includes(id), `Cycle at ${id}`);
+        for (const next of chapters.getStoryLinks(id, true).dependents) visit(next.id, [...path, id]);
+    };
+    for (const job of jobs) visit(job.id);
+});
+test('story position persists per profile without completing other jobs', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'ivice-story-'));
+    const path = join(dir, 'guide.db');
+    let db = adapter(path);
+    const session = { chapter: 1, region: '', lastGuideId: null };
+    try {
+        await api.migrate(db);
+        const other = await api.addProfile(db, 'Other route');
+        await api.setProgress(db, original, 'existing-guide', 'saved-step', true);
+        await api.writeStoryPosition(db, original, 'discharge-time', session);
+        await api.writeStoryPosition(db, other, 'checking-out', { ...session, chapter: 2 });
+        db.close(); db = adapter(path);
+        assert.equal(await api.readStoryPosition(db, original), 'discharge-time');
+        assert.equal(await api.readStoryPosition(db, other), 'checking-out');
+        await api.writeStoryPosition(db, original, 'cartel-heist', { ...session, chapter: 3 });
+        assert.equal((await api.readSession(db, original)).chapter, 3);
+        assert.deepEqual([...await api.readProgress(db, original)].sort(), ['existing-guide:saved-step', 'ivice-story-position:cartel-heist']);
+        await assert.rejects(api.writeStoryPosition(db, original, 'discharge-time', { ...session, chapter: 8 }));
+        assert.equal(await api.readStoryPosition(db, original), 'cartel-heist');
+        await api.writeStoryPosition(db, original, null, { ...session, chapter: 3 });
+        assert.equal(await api.readStoryPosition(db, original), null);
+        await api.removeProfile(db, other);
+        assert.equal(await api.readStoryPosition(db, other), null);
+    } finally { db.close(); rmSync(dir, { recursive: true, force: true }); }
+});
 test('chapter roadmap separates requirements from optional tasks and hides mission spoilers', () => {
     assert.equal(chapters.getChapterRoadmap(0), null);
     for (const chapter of [1, 2, 3, 4, 5]) {
